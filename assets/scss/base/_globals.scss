@@ -24,7 +24,7 @@ html {
 }
 
 body {
-
+  font-family: $font-JetBrains;
   font-style: normal;
   font-display: swap;
 }
@@ -63,15 +63,30 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .container {
-  max-width: calc(1337px);
+  max-width: 1840px;
+  width: calc(100% - 80px);
   margin: 0 auto;
-
-  @include media('lg') {
-    padding: 0 20px;
-  }
-
 }
 
 .section-top {
   margin-top: 160px;
+}
+
+.btn {
+  &-white {
+    border-radius: 4px;
+    padding: 10px 20px;
+    height: 41px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background: $color-white;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: -0.05em;
+    text-transform: uppercase;
+    text-align: center;
+    color: $color-black;
+  }
 }

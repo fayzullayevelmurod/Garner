@@ -1,0 +1,36 @@
+.home {
+  position: relative;
+  z-index: 1;
+  background: #efefef;
+
+  &-bg {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &-container {
+    min-height: 1080px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 30px;
+    padding: 30px;
+  }
+
+  h1 {
+    max-width: 936px;
+    font-family: $font-HS_LunaObscura;
+    font-weight: 400;
+    font-size: 50px;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+    text-align: center;
+    color: $color-white;
+  }
+}

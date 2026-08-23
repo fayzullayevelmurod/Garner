@@ -1,3 +1,63 @@
 .header {
-  
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 0;
+  z-index: 2;
+
+  &-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
+  }
+
+  &-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &-btn {
+    border: 1px solid rgba(22, 21, 22, 0.2);
+    border-radius: 4px;
+    padding: 0 20px;
+    height: 31px;
+    background: $color-white;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    font-size: 16px;
+    letter-spacing: -0.05em;
+    text-align: center;
+    color: $color-black;
+  }
+
+  &-left {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  &-right {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    .header-btn {
+      &:not(:first-child) {
+        padding: 0 16px;
+      }
+
+      span {
+        @include media(1220) {
+          display: none;
+        }
+      }
+    }
+  }
 }
