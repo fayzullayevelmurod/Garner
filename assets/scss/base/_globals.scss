@@ -27,6 +27,7 @@ body {
   font-family: $font-JetBrains;
   font-style: normal;
   font-display: swap;
+  background: $color-black;
 }
 
 input, textarea {
@@ -89,4 +90,14 @@ p, h1, h2, h3, h4, h5, h6 {
     text-align: center;
     color: $color-black;
   }
+}
+
+.section_title {
+  font-family: $font-HS_LunaObscura;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 150%;
+  letter-spacing: -4%;
+  text-transform: uppercase;
+  color: $color-white;
 }

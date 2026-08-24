@@ -1,0 +1,68 @@
+// technology
+.technology {
+  padding: 100px 0;
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 160px;
+  }
+
+  &_left {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: -80px;
+      height: 100%;
+      width: 1px;
+      background:#FAF1E8;
+      opacity: 20%;
+    }
+  }
+
+  &_right {
+    display: flex;
+    flex-direction: column;
+    gap: 335px;
+
+    span {
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 130%;
+      letter-spacing: -4%;
+      color: $color-white;
+    }
+
+    p {
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 100%;
+      letter-spacing: -5%;
+      color: $color-white;
+      opacity: 60%;
+    }
+  }
+
+  &_text {
+    max-width: 480px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .section_title {
+    max-width: 600px;
+  }
+
+  img {
+    width: 325px;
+    height: 356px;
+  }
+}
+// technology
