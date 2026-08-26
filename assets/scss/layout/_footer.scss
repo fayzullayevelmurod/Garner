@@ -5,16 +5,65 @@
   &_top {
     display: flex;
     align-items: start;
-    gap: 200px;
+    gap: 400px;
+
+    @include media("xl") {
+      gap: 200px;
+    }
+
+    @include media("lg") {
+      gap: 120px;
+    }
+
+    @include media("md") {
+      gap: 80px;
+    }
+
+    @include media("sm") {
+      gap: 100px 30px;
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+    }
 
     ul {
       display: flex;
       flex-direction: column;
       gap: 10px;
 
+      &:nth-child(1) {
+        @include media('sm') {
+          order: 2;
+        }
+      }
+
+      &:nth-child(2) {
+        @include media('sm') {
+          grid-column: 1 / -1;
+          order: 1;
+        }
+      }
+
+      &:nth-child(3) {
+        @include media('sm') {
+          order: 3;
+        }
+      }
+
+      &:nth-child(4) {
+        @include media('sm') {
+          grid-column: 1 / -1;
+          order: 4;
+        }
+      }
+
       &.end {
         text-align: right;
         margin-left: auto;
+
+        @include media('sm') {
+          text-align: left;
+          margin-left: 0;
+        }
       }
 
       .social_link {
@@ -23,6 +72,10 @@
         justify-content: end;
         gap: 20px;
         margin-top: 28px;
+
+        @include media('sm') {
+          justify-content: start;
+        }
       }
     }
 
@@ -33,6 +86,10 @@
       letter-spacing: -5%;
       color: $color-white;
       opacity: 60%;
+
+      @include media("lg") {
+        font-size: 14px;
+      }
     }
 
     a {
@@ -41,6 +98,10 @@
       line-height: 100%;
       letter-spacing: -5%;
       color: $color-white;
+
+      @include media("lg") {
+        font-size: 14px;
+      }
     }
   }
 
@@ -53,12 +114,25 @@
     align-items: start;
     justify-content: space-between;
 
+    @include media('sm') {
+      flex-direction: column;
+      gap: 10px;
+    }
+
     .center {
       text-align: center;
+
+      @include media('sm') {
+        text-align: left;
+      }
     }
 
     .right {
       text-align: right;
+
+      @include media('sm') {
+        text-align: left;
+      }
     }
 
     ul {
@@ -66,6 +140,11 @@
       flex-direction: column;
       gap: 10px;
       width: 330px;
+
+      li {
+        display: flex;
+        align-items: center;
+      }
     }
 
     a {
@@ -75,6 +154,10 @@
       letter-spacing: -5%;
       color: $color-white;
       opacity: 60%;
+
+      @include media("lg") {
+        font-size: 10px;
+      }
     }
   }
 }

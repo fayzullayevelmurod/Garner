@@ -1,0 +1,52 @@
+// error
+.error {
+  padding: 80px 0 200px 0;
+
+  @include media('xl') {
+    padding: 80px 0 150px 0;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  h1 {
+    font-family: $font-HS_LunaObscura;
+    font-weight: 400;
+    font-size: 90px;
+    line-height: 150%;
+    letter-spacing: -4%;
+    text-transform: uppercase;
+    color: $color-white;
+
+    @include media('sm') {
+      font-size: 70px;
+    }
+  }
+
+  p {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: -5%;
+    text-align: center;
+    color: $color-white;
+    max-width: 480px;
+
+    @include media('lg') {
+      font-size: 14px;
+    }
+  }
+
+  .btns {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    justify-content: center;
+  }
+}
+// error
