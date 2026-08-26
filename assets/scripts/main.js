@@ -27,6 +27,34 @@ const homeSwp = new Swiper(".home-swp", {
   },
 });
 
+// slider_stories
+const customSwiper = new Swiper(".customSwiper", {
+  slidesPerView: 5,
+  centeredSlides: true,
+  spaceBetween: 0,
+  initialSlide: 2,
+  speed: 600,
+
+  grabCursor: true,
+
+  watchSlidesProgress: true,
+
+  breakpoints: {
+    0: {
+      slidesPerView: 1.5,
+    },
+
+    576: {
+      slidesPerView: 3,
+    },
+
+    992: {
+      slidesPerView: 5,
+    },
+  },
+});
+// slider_stories
+
 // let swiper = new Swiper(".treatmentsSwiper", {
 //   slidesPerView: 1.10,
 //   spaceBetween: 28,

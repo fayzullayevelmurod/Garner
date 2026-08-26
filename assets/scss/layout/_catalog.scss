@@ -1,0 +1,60 @@
+// catalog
+.catalog {
+  padding: 100px 0;
+
+  &_head {
+    margin-bottom: 60px;
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+  }
+
+  &_in {
+    border-top: 1px solid #444140;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+  }
+
+  &_card {
+    border-right: 1px solid #444140;
+    border-bottom: 1px solid #444140;
+    padding: 10px;
+
+    &:nth-child(4) {
+      border-right: none;
+    }
+
+    &:last-child {
+      border-right: none;
+    }
+
+    img {
+      display: block;
+      width: 320px;
+      height: 408px;
+      object-fit: cover;
+      margin: 0 auto;
+    }
+
+    &-text {
+      h3 {
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 100%;
+        letter-spacing: -5%;
+        color: $color-white;
+        margin: 10px 0;
+      }
+
+      span {
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 100%;
+        letter-spacing: -5%;
+        color: $color-white;
+        opacity: 60%;
+      }
+    }
+  }
+}
+// catalog
