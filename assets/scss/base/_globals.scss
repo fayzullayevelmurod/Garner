@@ -167,6 +167,7 @@ p, h1, h2, h3, h4, h5, h6 {
   align-items: center;
   gap: 10px;
   margin-top: 110px;
+  flex-wrap: wrap;
 
   a,li,span {
     font-weight: 300;
@@ -182,5 +183,56 @@ p, h1, h2, h3, h4, h5, h6 {
   span {
     color: $color-white;
     text-transform: uppercase;
+  }
+}
+
+.custom-checkbox {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  user-select: none;
+
+  input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  &__box {
+    width: 14px;
+    height: 14px;
+    border: 1px solid #B16A37;
+    border-radius: 2px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    svg {
+        width: 9px;
+        height: 7px;
+
+        opacity: 0;
+        transform: scale(0.7);
+
+        transition:
+            opacity 0.15s ease,
+            transform 0.15s ease;
+    }
+  }
+
+  input:checked + &__box {
+    svg {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 1;
   }
 }

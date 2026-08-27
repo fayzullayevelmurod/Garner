@@ -102,3 +102,11 @@ let swiper3 = new Swiper(".cookSwiper", {
   },
 });
 // cookSwiper
+
+// checkbox
+const checkbox = document.querySelector(".custom-checkbox input");
+
+checkbox.addEventListener("change", () => {
+  console.log(checkbox.checked);
+});
+// checkbox
