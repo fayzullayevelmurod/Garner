@@ -573,6 +573,27 @@ p, h1, h2, h3, h4, h5, h6 {
   gap: 30px;
   padding: 30px;
 }
+@media (max-width: 1620px) {
+  .home-container {
+    min-height: 820px;
+  }
+}
+@media (max-width: 1200px) {
+  .home-container {
+    min-height: 720px;
+  }
+}
+@media (max-width: 870px) {
+  .home-container {
+    gap: 20px;
+  }
+}
+@media (max-width: 680px) {
+  .home-container {
+    gap: 430px;
+    padding: 10px 10px 30px 10px;
+  }
+}
 .home h1 {
   max-width: 936px;
   font-family: "HS_LunaObscura", sans-serif;
@@ -582,6 +603,21 @@ p, h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
   text-align: center;
   color: #FAF1E8;
+}
+@media (max-width: 1620px) {
+  .home h1 {
+    font-size: 40px;
+  }
+}
+@media (max-width: 1200px) {
+  .home h1 {
+    font-size: 35px;
+  }
+}
+@media (max-width: 680px) {
+  .home h1 {
+    font-size: 28px;
+  }
 }
 
 .technology {
