@@ -45,35 +45,60 @@ const customSwiper = new Swiper(".customSwiper", {
     },
 
     576: {
+      slidesPerView: 2.3,
+    },
+
+    850: {
       slidesPerView: 3,
     },
 
-    992: {
+    1200: {
       slidesPerView: 5,
     },
   },
 });
 // slider_stories
 
-// let swiper = new Swiper(".treatmentsSwiper", {
-//   slidesPerView: 1.10,
-//   spaceBetween: 28,
-//   pagination: {
-//     el: ".swiper-pagination",
-//     clickable: true,
-//   },
-//   breakpoints: {
-//     640: {
-//       slidesPerView: 2.2,
-//       spaceBetween: 28,
-//     },
-//     993: {
-//       slidesPerView: 3.2,
-//       spaceBetween: 28,
-//     },
-//     1200: {
-//       slidesPerView: 3.6,
-//       spaceBetween: 40,
-//     },
-//   },
-// });
+// similarSwiper
+let swiper = new Swiper(".similarSwiper", {
+  slidesPerView: 1.1,
+  spaceBetween: 0,
+  breakpoints: {
+    420: {
+      slidesPerView: 2.3,
+    },
+    640: {
+      slidesPerView: 3.3,
+    },
+    993: {
+      slidesPerView: 4.3,
+    },
+    1200: {
+      slidesPerView: 4,
+    },
+  },
+});
+// similarSwiper
+
+// includedSwiper
+let swiper2 = new Swiper(".includedSwiper", {
+  slidesPerView: 1.2,
+  spaceBetween: 10,
+  breakpoints: {
+    680: {
+      slidesPerView: 5,
+    },
+  },
+});
+// includedSwiper
+
+// cookSwiper
+let swiper3 = new Swiper(".cookSwiper", {
+  slidesPerView: 1,
+  spaceBetween: 10,
+  pagination: {
+    el: ".cook-pagination",
+    clickable: true,
+  },
+});
+// cookSwiper
