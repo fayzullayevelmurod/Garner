@@ -552,6 +552,23 @@
   padding: 70px 0;
   overflow: hidden;
 
+  &.black {
+    background: $color-white;
+
+    .section_title {
+      color: $color-black;
+    }
+
+    h3 {
+      color: $color-black;
+    }
+
+    span {
+      color: $color-black;
+      opacity: 60%;
+    }
+  }
+
   .section_title {
     margin-bottom: 60px;
   }

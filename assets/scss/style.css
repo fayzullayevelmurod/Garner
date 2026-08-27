@@ -1740,6 +1740,19 @@ input:checked + .custom-checkbox__box svg {
   padding: 70px 0;
   overflow: hidden;
 }
+.similar_products.black {
+  background: #FAF1E8;
+}
+.similar_products.black .section_title {
+  color: #161516;
+}
+.similar_products.black h3 {
+  color: #161516;
+}
+.similar_products.black span {
+  color: #161516;
+  opacity: 60%;
+}
 .similar_products .section_title {
   margin-bottom: 60px;
 }
