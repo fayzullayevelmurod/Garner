@@ -1746,6 +1746,14 @@ input:checked + .custom-checkbox__box svg {
 .similar_products.black .section_title {
   color: #161516;
 }
+.similar_products.black .swiper-slide .catalog_card {
+  border-top: 1px solid rgba(22, 21, 22, 0.2);
+  border-right: 1px solid rgba(22, 21, 22, 0.2);
+  border-bottom: 1px solid rgba(22, 21, 22, 0.2);
+}
+.similar_products.black .swiper-slide:last-child .catalog_card {
+  border-right: none;
+}
 .similar_products.black h3 {
   color: #161516;
 }
@@ -1755,6 +1763,11 @@ input:checked + .custom-checkbox__box svg {
 }
 .similar_products .section_title {
   margin-bottom: 60px;
+}
+@media (max-width: 870px) {
+  .similar_products .section_title {
+    margin-bottom: 40px;
+  }
 }
 .similar_products .similarSwiper {
   overflow: visible;
@@ -1775,6 +1788,291 @@ input:checked + .custom-checkbox__box svg {
 }
 .similar_products .swiper-slide:last-child .catalog_card {
   border-right: none;
+}
+
+.product_hero {
+  background: #FAF1E8;
+  padding: 70px 0 100px 0;
+}
+@media (max-width: 1200px) {
+  .product_hero {
+    padding: 70px 0;
+  }
+}
+.product_hero .container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 200px;
+}
+@media (max-width: 1620px) {
+  .product_hero .container {
+    gap: 80px;
+  }
+}
+@media (max-width: 1200px) {
+  .product_hero .container {
+    gap: 40px;
+  }
+}
+@media (max-width: 870px) {
+  .product_hero .container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.product_hero-left {
+  height: 873px;
+}
+@media (max-width: 1620px) {
+  .product_hero-left {
+    height: 696px;
+  }
+}
+@media (max-width: 1200px) {
+  .product_hero-left {
+    height: 560px;
+  }
+}
+@media (max-width: 870px) {
+  .product_hero-left {
+    height: 776px;
+  }
+}
+@media (max-width: 680px) {
+  .product_hero-left {
+    height: 341px;
+  }
+}
+.product_hero-left img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.product_hero-right {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+}
+@media (max-width: 870px) {
+  .product_hero-right {
+    flex-direction: column-reverse;
+  }
+}
+.product_hero-right-text {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
+}
+@media (max-width: 680px) {
+  .product_hero-right-text {
+    align-items: start;
+    text-align: left;
+    width: 100%;
+  }
+}
+.product_hero-right .section_title {
+  text-align: center;
+  color: #161516;
+}
+@media (max-width: 1620px) {
+  .product_hero-right .section_title {
+    font-size: 35px;
+  }
+}
+@media (max-width: 1200px) {
+  .product_hero-right .section_title {
+    font-size: 30px;
+  }
+}
+@media (max-width: 680px) {
+  .product_hero-right .section_title {
+    font-size: 25px;
+    text-align: left;
+  }
+}
+@media (max-width: 870px) {
+  .product_hero-right .section_title br {
+    display: none;
+  }
+}
+.product_hero-right .mini_text {
+  font-family: "JetBrains Mono", monospace;
+  display: block;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: -5%;
+  text-align: center;
+  color: #161516;
+  opacity: 60%;
+  text-transform: none;
+  margin-top: 10px;
+}
+@media (max-width: 1200px) {
+  .product_hero-right .mini_text {
+    font-size: 14px;
+  }
+}
+@media (max-width: 680px) {
+  .product_hero-right .mini_text {
+    text-align: left;
+  }
+}
+.product_hero-right p {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: -5%;
+  text-align: center;
+  color: #161516;
+  max-width: 460px;
+  text-align: center;
+}
+@media (max-width: 1200px) {
+  .product_hero-right p {
+    font-size: 14px;
+  }
+}
+@media (max-width: 680px) {
+  .product_hero-right p {
+    text-align: left;
+  }
+}
+.product_hero_imgs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: auto;
+}
+@media (max-width: 680px) {
+  .product_hero_imgs {
+    display: none;
+  }
+}
+.product_hero_imgs img {
+  height: 340px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (max-width: 1620px) {
+  .product_hero_imgs img {
+    height: 263px;
+  }
+}
+@media (max-width: 1200px) {
+  .product_hero_imgs img {
+    height: 191px;
+  }
+}
+@media (max-width: 870px) {
+  .product_hero_imgs img {
+    height: 300px;
+  }
+}
+
+.brand {
+  position: relative;
+  background-image: url("../images/banner_two.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 920px;
+  padding: 100px 0 0 0;
+  overflow: hidden;
+}
+@media (max-width: 1200px) {
+  .brand {
+    height: 820px;
+    padding: 70px 0 0 0;
+  }
+}
+@media (max-width: 870px) {
+  .brand {
+    background-position: right;
+  }
+}
+@media (max-width: 680px) {
+  .brand {
+    background-position: center;
+    padding: 50px 0 0 0;
+  }
+}
+.brand::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0) 53.84%, rgba(0, 0, 0, 0.5) 104.27%);
+}
+.brand .container {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 150px;
+}
+@media (max-width: 870px) {
+  .brand .container {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 40px;
+  }
+}
+.brand .section_title {
+  max-width: 599px;
+  font-size: 45px;
+}
+@media (max-width: 1620px) {
+  .brand .section_title {
+    font-size: 35px;
+  }
+}
+@media (max-width: 1200px) {
+  .brand .section_title {
+    font-size: 30px;
+  }
+}
+@media (max-width: 870px) {
+  .brand .section_title {
+    font-size: 25px;
+    text-align: center;
+  }
+}
+.brand p {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: -5%;
+  color: #FAF1E8;
+  margin-bottom: 30px;
+}
+@media (max-width: 1200px) {
+  .brand p {
+    font-size: 14px;
+  }
+}
+@media (max-width: 870px) {
+  .brand p {
+    max-width: 600px;
+  }
+}
+@media (max-width: 680px) {
+  .brand p {
+    text-align: center;
+  }
+}
+.brand .btn-radial {
+  width: -moz-max-content;
+  width: max-content;
+}
+@media (max-width: 680px) {
+  .brand .btn-radial {
+    margin: auto;
+  }
 }
 
 .thank_you {
