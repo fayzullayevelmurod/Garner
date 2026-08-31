@@ -2132,6 +2132,394 @@ input:checked + .custom-checkbox__box svg {
   }
 }
 
+.contact {
+  padding: 100px 0;
+}
+.contact_social_in {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-top: 80px;
+}
+.contact_block {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.contact_block img {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  flex-shrink: 0;
+}
+.contact_block a {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 130%;
+  letter-spacing: -4%;
+  color: #FAF1E8;
+}
+
+.problems {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  padding: 100px 0 0 0;
+}
+.problems .left {
+  height: 100%;
+  position: relative;
+  padding-bottom: 240px;
+}
+.problems .left p {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: -5%;
+  color: #FAF1E8;
+  opacity: 60%;
+  max-width: 590px;
+  margin: 40px 0;
+}
+.problems .left img {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 210px;
+  height: 230px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.problems .application-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px 20px;
+  color: #faf1e8;
+}
+.problems .application-form__field {
+  position: relative;
+  width: 100%;
+}
+.problems .application-form__field:last-child {
+  grid-column: 1/-1;
+}
+.problems .application-form label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 16px;
+  color: #faf1e8;
+}
+.problems .application-form label span {
+  color: #a96535;
+}
+.problems .form-input,
+.problems .form-textarea {
+  width: 100%;
+  border: 1px solid #373534;
+  border-radius: 7px;
+  outline: none;
+  background: transparent;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 300;
+  color: #faf1e8;
+  transition: border-color 0.2s ease;
+}
+.problems .form-input::-moz-placeholder, .problems .form-textarea::-moz-placeholder {
+  color: #85817f;
+  opacity: 1;
+}
+.problems .form-input::placeholder,
+.problems .form-textarea::placeholder {
+  color: #85817f;
+  opacity: 1;
+}
+.problems .form-input:hover,
+.problems .form-textarea:hover {
+  border-color: #454341;
+}
+.problems .form-input:focus,
+.problems .form-textarea:focus {
+  border-color: #555250;
+}
+.problems .form-input {
+  height: 40px;
+  padding: 0 10px;
+}
+.problems .form-textarea {
+  min-height: 100px;
+  padding: 10px;
+  resize: vertical;
+  line-height: 18px;
+}
+.problems .phone-input {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  border: 1px solid #373534;
+  border-radius: 7px;
+  background: transparent;
+}
+.problems .phone-input:focus-within {
+  border-color: #555250;
+}
+.problems .phone-input__country {
+  position: relative;
+  height: 100%;
+  flex-shrink: 0;
+}
+.problems .phone-input__country-trigger {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 0 0 9px;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  cursor: pointer;
+}
+.problems .phone-input__flag {
+  display: flex;
+  flex-direction: column;
+  width: 16px;
+  height: 11px;
+  overflow: hidden;
+  border-radius: 1px;
+  flex-shrink: 0;
+}
+.problems .phone-input__flag span {
+  display: block;
+  width: 100%;
+  height: 33.333%;
+}
+.problems .phone-input__flag--ru span:nth-child(1) {
+  background: #fff;
+}
+.problems .phone-input__flag--ru span:nth-child(2) {
+  background: #1d4d91;
+}
+.problems .phone-input__flag--ru span:nth-child(3) {
+  background: #d52b1e;
+}
+.problems .phone-input__flag--uz span:nth-child(1) {
+  background: #0099b5;
+}
+.problems .phone-input__flag--uz span:nth-child(2) {
+  background: #fff;
+}
+.problems .phone-input__flag--uz span:nth-child(3) {
+  background: #1eb53a;
+}
+.problems .phone-input__flag--us {
+  background: #b22234;
+}
+.problems .phone-input__country-arrow {
+  width: 10px;
+  height: 10px;
+  margin-left: 4px;
+  opacity: 0.65;
+  transition: transform 0.2s ease;
+}
+.problems .phone-input__code {
+  margin-left: 3px;
+  font-size: 13px;
+  line-height: 1;
+  color: #85817f;
+}
+.problems .phone-input__country-dropdown {
+  position: absolute;
+  z-index: 50;
+  top: calc(100% + 5px);
+  left: 0;
+  width: 250px;
+  max-height: 220px;
+  overflow-y: auto;
+  padding: 4px;
+  border: 1px solid #373534;
+  border-radius: 7px;
+  background: #171616;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-5px);
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.problems .phone-input__country-dropdown::-webkit-scrollbar {
+  display: none;
+}
+.problems .phone-input__country-option {
+  display: grid;
+  grid-template-columns: 22px 1fr auto;
+  align-items: center;
+  gap: 7px;
+  width: 100%;
+  min-height: 34px;
+  padding: 6px 8px;
+  border: 0;
+  border-radius: 4px;
+  background: transparent;
+  font-family: inherit;
+  font-size: 12px;
+  color: #85817f;
+  text-align: left;
+  cursor: pointer;
+}
+.problems .phone-input__country-option:hover {
+  background: #242221;
+  color: #faf1e8;
+}
+.problems .phone-input__country-option.is-selected {
+  color: #a96535;
+}
+.problems .phone-input__input {
+  flex: 1;
+  min-width: 0;
+  height: 100%;
+  padding: 0 10px 0 7px;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 400;
+  color: #faf1e8;
+}
+.problems .phone-input__input::-moz-placeholder {
+  color: #85817f;
+  opacity: 1;
+}
+.problems .phone-input__input::placeholder {
+  color: #85817f;
+  opacity: 1;
+}
+.problems .phone-input.is-country-open .phone-input__country-dropdown {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.problems .phone-input.is-country-open .phone-input__country-arrow {
+  transform: rotate(180deg);
+}
+.problems .custom-select {
+  position: relative;
+  width: 100%;
+}
+.problems .custom-select.is-open .custom-select__dropdown {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.problems .custom-select.is-open .custom-select__arrow {
+  transform: rotate(180deg);
+}
+.problems .custom-select__trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 37px;
+  padding: 0 8px 0 10px;
+  border: 1px solid #373534;
+  border-radius: 7px;
+  outline: none;
+  background: transparent;
+  font-family: inherit;
+  font-size: 13px;
+  color: #85817f;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+.problems .custom-select__trigger:hover {
+  border-color: #454341;
+}
+.problems .custom-select__value {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.problems .custom-select__arrow {
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+.problems .custom-select__dropdown {
+  position: absolute;
+  z-index: 40;
+  top: calc(100% + 5px);
+  left: 0;
+  width: 100%;
+  max-height: 180px;
+  overflow-y: auto;
+  padding: 4px;
+  border: 1px solid #373534;
+  border-radius: 7px;
+  background: #171616;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-5px);
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.problems .custom-select__dropdown::-webkit-scrollbar {
+  display: none;
+}
+.problems .custom-select__option {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 32px;
+  padding: 7px 8px;
+  border: 0;
+  border-radius: 4px;
+  background: transparent;
+  font-family: inherit;
+  font-size: 13px;
+  color: #85817f;
+  text-align: left;
+  cursor: pointer;
+}
+.problems .custom-select__option:hover {
+  background: #242221;
+  color: #faf1e8;
+}
+.problems .custom-select__option.is-selected {
+  color: #a96535;
+}
+@media (max-width: 680px) {
+  .problems .application-form {
+    max-width: 100%;
+  }
+  .problems .application-form__field:not(:last-child) {
+    margin-bottom: 26px;
+  }
+  .problems .phone-input__country-dropdown {
+    width: 235px;
+  }
+}
+.problems .checkboxs {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 40px 0;
+}
+.problems .checkboxs .custom-checkbox {
+  color: #FAF1E8;
+}
+
 .article_hero {
   padding: 80px 0 100px 0;
 }
