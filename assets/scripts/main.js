@@ -92,8 +92,26 @@ let swiper2 = new Swiper(".includedSwiper", {
 });
 // includedSwiper
 
+// includedSwiper
+let swiper3 = new Swiper(".recommendationsSwiper", {
+  slidesPerView: 1.1,
+  spaceBetween: 10,
+  breakpoints: {
+    800: {
+      slidesPerView: 2.4,
+    },
+    1200: {
+      slidesPerView: 3.1,
+    },
+    1440: {
+      slidesPerView: 4,
+    },
+  },
+});
+// includedSwiper
+
 // cookSwiper
-let swiper3 = new Swiper(".cookSwiper", {
+let swiper4 = new Swiper(".cookSwiper", {
   slidesPerView: 1,
   spaceBetween: 10,
   pagination: {

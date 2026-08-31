@@ -453,6 +453,66 @@
   padding: 70px 0;
   overflow: hidden;
 
+  &.recommendations {
+    background: $color-black;
+
+    .recommendationsSwiper {
+      overflow: visible;
+    }
+
+    .section_title {
+      color: $color-white;
+    }
+
+    .included_card {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      .included_card_img {
+        height: 415px;
+        background: #727272;
+
+        @include media('sm'){
+          height: 280px;
+        }
+      }
+
+      h3 {
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 130%;
+        letter-spacing: -4%;
+        color: $color-white;
+
+        @include media('lg') {
+          font-size: 20px;
+        }
+
+        @include media('md') {
+          font-size: 18px;
+        }
+      }
+
+      p {
+        font-weight: 300;
+        font-size: 12px;
+        line-height: 100%;
+        letter-spacing: -5%;
+        color: $color-white;
+        opacity: 60%;
+
+        @include media('md') {
+          font-size: 10px;
+        }
+      }
+
+      .btn-white {
+        width: max-content;
+      }
+    }
+  }
+
   .section_title {
     color: $color-black;
     margin-bottom: 60px;
