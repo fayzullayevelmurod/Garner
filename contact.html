@@ -194,14 +194,9 @@
                     </label>
 
                     <div class="phone-input">
-
                       <div class="phone-input__country">
                         <button type="button" class="phone-input__country-trigger" aria-expanded="false">
-                          <span class="phone-input__flag">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                          </span>
+                          <span class="phone-input__flag"></span>
 
                           <svg class="phone-input__country-arrow" width="12" height="12" viewBox="0 0 12 12" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
@@ -210,95 +205,13 @@
                               fill="#FAF1E8" />
                           </svg>
 
-                          <span class="phone-input__code">+7</span>
+                          <span class="phone-input__code"></span>
                         </button>
-
                         <div class="phone-input__country-dropdown">
-
-                          <button type="button" class="phone-input__country-option is-selected" data-code="+7" data-country="ru"
-                            data-mask="(000) 000-00-00">
-                            <span class="phone-input__flag phone-input__flag--ru">
-                              <span></span>
-                              <span></span>
-                              <span></span>
-                            </span>
-                            <span>Россия</span>
-                            <span>+7</span>
-                          </button>
-
-                          <button type="button" class="phone-input__country-option" data-code="+998" data-country="uz"
-                            data-mask="(00) 000-00-00">
-                            <span class="phone-input__flag phone-input__flag--uz">
-                              <span></span>
-                              <span></span>
-                              <span></span>
-                            </span>
-                            <span>Узбекистан</span>
-                            <span>+998</span>
-                          </button>
-
-                          <button type="button" class="phone-input__country-option" data-code="+1" data-country="us"
-                            data-mask="(000) 000-0000">
-                            <span class="phone-input__flag phone-input__flag--us">
-                              <span></span>
-                              <span></span>
-                              <span></span>
-                            </span>
-                            <span>США</span>
-                            <span>+1</span>
-                          </button>
-
-                          <button type="button" class="phone-input__country-option" data-code="+44" data-country="gb"
-                            data-mask="0000 000000">
-                            <span class="phone-input__flag phone-input__flag--gb">
-                              🇬🇧
-                            </span>
-                            <span>Великобритания</span>
-                            <span>+44</span>
-                          </button>
-
-                          <button type="button" class="phone-input__country-option" data-code="+90" data-country="tr"
-                            data-mask="000 000 00 00">
-                            <span class="phone-input__flag phone-input__flag--tr">
-                              🇹🇷
-                            </span>
-                            <span>Турция</span>
-                            <span>+90</span>
-                          </button>
-
-                          <button type="button" class="phone-input__country-option" data-code="+49" data-country="de"
-                            data-mask="0000 0000000">
-                            <span class="phone-input__flag">
-                              🇩🇪
-                            </span>
-                            <span>Германия</span>
-                            <span>+49</span>
-                          </button>
-
-                          <button type="button" class="phone-input__country-option" data-code="+33" data-country="fr"
-                            data-mask="0 00 00 00 00">
-                            <span class="phone-input__flag">
-                              🇫🇷
-                            </span>
-                            <span>Франция</span>
-                            <span>+33</span>
-                          </button>
-
-                          <button type="button" class="phone-input__country-option" data-code="+7" data-country="kz"
-                            data-mask="(000) 000-00-00">
-                            <span class="phone-input__flag">
-                              🇰🇿
-                            </span>
-                            <span>Казахстан</span>
-                            <span>+7</span>
-                          </button>
-
                         </div>
                       </div>
 
-                      <input id="phone" name="phone" type="tel" class="phone-input__input" placeholder="(000) 000-00-00"
-                        autocomplete="tel">
-
+                      <input id="user_tel_field" name="user_tel_field" type="text" class="phone-input__input" autocomplete="off" autocorrect="off" spellcheck="false">
                     </div>
                   </div>
 
@@ -608,6 +521,7 @@
 
   <!-- iMask -->
   <script src="./assets/scripts/iMask.js"></script>
+  <script src="./assets/scripts/countries.js"></script>
   <!-- iMask -->
   <!-- Swiper js -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
