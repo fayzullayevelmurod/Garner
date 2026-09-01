@@ -122,15 +122,62 @@ let swiper4 = new Swiper(".cookSwiper", {
 // cookSwiper
 
 // checkbox
+// Barcha voqealarni DOM to'liq yuklangach ishga tushiramiz
+document.addEventListener('DOMContentLoaded', () => {
 
-const checkbox = document.querySelector(".custom-checkbox input");
+  // Sahifadagi barcha select elementlarini qidirish
+  document.addEventListener('click', (e) => {
+    const currentSelect = e.target.closest('[data-select]');
+    const triggerBtn = e.target.closest('.custom-select__trigger');
+    const optionBtn = e.target.closest('.custom-select__option');
 
-if (checkbox) {
-  checkbox.addEventListener("change", () => {
-    console.log(checkbox.checked);
+    // 1. Agar trigger (tushuvchi tugma) bosilsa
+    if (triggerBtn && currentSelect) {
+      e.stopPropagation();
+      const isOpen = currentSelect.classList.contains('is-open');
+
+      // Boshqa ochiq select'larni yopish
+      document.querySelectorAll('[data-select]').forEach((s) => {
+        s.classList.remove('is-open');
+      });
+
+      // Agar yopiq bo'lsa - ochish
+      if (!isOpen) {
+        currentSelect.classList.add('is-open');
+      }
+      return;
+    }
+
+    // 2. Agar menu ichidagi variant (option) bosilsa
+    if (optionBtn && currentSelect) {
+      const val = optionBtn.getAttribute('data-value');
+      const text = optionBtn.innerText;
+      const valueSpan = currentSelect.querySelector('.custom-select__value');
+      const hiddenInput = currentSelect.querySelector('input[type="hidden"]');
+
+      if (valueSpan) valueSpan.innerText = text;
+      if (hiddenInput) hiddenInput.value = val;
+
+      // Aktiv element indikatorini o'zgartirish
+      currentSelect.querySelectorAll('.custom-select__option').forEach((opt) => {
+        opt.classList.remove('is-selected');
+      });
+      optionBtn.classList.add('is-selected');
+
+      // Dropdownni yopish
+      currentSelect.classList.remove('is-open');
+      return;
+    }
+
+    // 3. Agar tashqariga bosilsa barcha select menyularini yopish
+    if (!currentSelect) {
+      document.querySelectorAll('[data-select]').forEach((s) => {
+        s.classList.remove('is-open');
+      });
+    }
   });
-}
 
+});
 // checkbox
 
 
