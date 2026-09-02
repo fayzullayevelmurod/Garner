@@ -1,0 +1,167 @@
+// catalog
+.catalog {
+  padding: 100px 0;
+
+  @include media('lg') {
+    padding: 70px 0;
+  }
+
+  &_head {
+    margin-bottom: 60px;
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+
+    @include media('lg') {
+      margin-bottom: 40px;
+    }
+
+    @include media('md') {
+      margin-bottom: 60px;
+    }
+
+    @include media('sm') {
+      gap: 30px;
+      align-items: center;
+      flex-direction: column;
+    }
+  }
+
+  &_in {
+    border-top: 1px solid #444140;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+
+    @include media('lg') {
+      grid-template-columns: repeat(3,1fr);
+    }
+
+    @include media('md') {
+      grid-template-columns: repeat(2,1fr);
+    }
+  }
+
+  &_card {
+    border-right: 1px solid #444140;
+    border-bottom: 1px solid #444140;
+    padding: 10px;
+
+    &.empty_one {
+      @include media('lg') {
+        display: none;
+      }
+    }
+
+    &.empty_two {
+      @include media('lg') {
+        display: none;
+      }
+    }
+
+    &.empty_three {
+      @include media('md') {
+        display: none;
+      }
+    }
+
+    .end_block {
+      @include media('md') {
+        display: none;
+      }
+    }
+
+    &:nth-child(1) {
+      @include media('sm') {
+        grid-column: 1 / -1;
+        border-right: none;
+      }
+
+      img {
+        @include media('sm') {
+          height: 400px;
+          width: 320px;
+        }
+      }
+    }
+
+    &:nth-child(3) {
+      @include media('md') {
+        border-right: none;
+      }
+
+      @include media('sm') {
+        border-right: 1px solid #444140;
+      }
+    }
+
+    &:nth-child(4) {
+      border-right: none;
+
+      @include media('md') {
+        border-right: 1px solid #444140;
+      }
+
+      @include media('sm') {
+        border-right: none;
+      }
+    }
+
+    &:nth-child(6) {
+      @include media('md') {
+        display: none;
+      }
+    }
+
+    &:nth-child(8) {
+      @include media('sm') {
+        display: none;
+      }
+    }
+
+    &:last-child {
+      border-right: none;
+    }
+
+    img {
+      display: block;
+      width: 320px;
+      height: 408px;
+      object-fit: cover;
+      margin: 0 auto;
+
+      @include media('sm') {
+        width: 150px;
+        height: 190px;
+      }
+    }
+
+    &-text {
+      h3 {
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 100%;
+        letter-spacing: -5%;
+        color: $color-white;
+        margin: 10px 0;
+
+        @include media('lg') {
+          font-size: 14px;
+        }
+      }
+
+      span {
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 100%;
+        letter-spacing: -5%;
+        color: $color-white;
+        opacity: 60%;
+
+        @include media('lg') {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+// catalog
