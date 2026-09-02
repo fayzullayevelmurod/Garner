@@ -368,7 +368,6 @@ address {
 }
 
 ul, ol, dl {
-  list-style: none;
   padding: 0;
   margin: 0;
 }
@@ -2283,6 +2282,198 @@ input:checked + .custom-checkbox__box svg {
   }
 }
 
+.payment {
+  padding: 80px 0;
+}
+@media (max-width: 680px) {
+  .payment {
+    padding: 60px 0;
+  }
+}
+.payment .section_title {
+  margin-bottom: 40px;
+}
+.payment_in {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 80px;
+}
+@media (max-width: 680px) {
+  .payment_in {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 40px;
+  }
+}
+.payment .text {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+@media (max-width: 870px) {
+  .payment .text {
+    gap: 20px;
+  }
+}
+.payment p {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: -5%;
+  color: #FAF1E8;
+  opacity: 60%;
+}
+@media (max-width: 1200px) {
+  .payment p {
+    font-size: 14px;
+  }
+}
+.payment p a {
+  display: inline;
+  text-decoration: underline;
+  color: #B16A37;
+}
+.payment .btn-radial {
+  height: 40px;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.payment_delivery {
+  padding: 100px 0;
+}
+@media (max-width: 1200px) {
+  .payment_delivery {
+    padding: 70px 0;
+  }
+}
+.payment_delivery_head {
+  padding: 40px 0 0 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 80px;
+}
+@media (max-width: 870px) {
+  .payment_delivery_head {
+    gap: 40px;
+  }
+}
+@media (max-width: 680px) {
+  .payment_delivery_head {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.payment_delivery_head p, .payment_delivery_head span {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: -5%;
+  color: #FAF1E8;
+  opacity: 60%;
+}
+@media (max-width: 1200px) {
+  .payment_delivery_head p, .payment_delivery_head span {
+    font-size: 14px;
+  }
+}
+.payment_delivery_head span {
+  color: #B16A37;
+}
+.payment_delivery_block {
+  padding: 80px 0;
+}
+@media (max-width: 870px) {
+  .payment_delivery_block {
+    padding: 40px 0;
+  }
+}
+.payment_delivery_block .block_in {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 80px;
+}
+@media (max-width: 870px) {
+  .payment_delivery_block .block_in {
+    gap: 40px;
+  }
+}
+@media (max-width: 680px) {
+  .payment_delivery_block .block_in {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.payment_delivery_block h3 {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 130%;
+  letter-spacing: -4%;
+  color: #FAF1E8;
+  margin-bottom: 40px;
+}
+@media (max-width: 1200px) {
+  .payment_delivery_block h3 {
+    font-size: 20px;
+  }
+}
+@media (max-width: 870px) {
+  .payment_delivery_block h3 {
+    font-size: 18px;
+  }
+}
+@media (max-width: 680px) {
+  .payment_delivery_block h3 {
+    font-size: 16px;
+  }
+}
+.payment_delivery_block ul li {
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(250, 241, 232, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.payment_delivery_block ul li p, .payment_delivery_block ul li span {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: -5%;
+  color: #FAF1E8;
+  max-width: 500px;
+}
+@media (max-width: 680px) {
+  .payment_delivery_block ul li p, .payment_delivery_block ul li span {
+    font-size: 14px;
+  }
+}
+.payment_delivery_block ul li ul {
+  padding-left: 20px;
+}
+.payment_delivery_block ul li ul li {
+  list-style-type: disc;
+}
+.payment_delivery_block ul li span {
+  opacity: 60%;
+}
+.payment_delivery_block .product_list li {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: -5%;
+  color: #FAF1E8;
+}
+@media (max-width: 680px) {
+  .payment_delivery_block .product_list li {
+    font-size: 14px;
+  }
+}
+.payment_delivery .mini_block {
+  padding-bottom: 80px;
+}
+@media (max-width: 870px) {
+  .payment_delivery .mini_block {
+    padding-bottom: 40px;
+  }
+}
+
 .contact {
   padding: 100px 0;
 }
@@ -2678,7 +2869,6 @@ input:checked + .custom-checkbox__box svg {
   border-radius: 8px;
   outline: none;
   background: transparent;
-  font-family: monospace, inherit;
   font-size: 14px;
   color: #85817f;
   cursor: pointer;

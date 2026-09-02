@@ -1,0 +1,197 @@
+// payment
+.payment {
+  padding: 80px 0;
+
+  @include media('sm') {
+    padding: 60px 0;
+  }
+
+  .section_title {
+    margin-bottom: 40px;
+  }
+
+  &_in {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 80px;
+
+    @include media('sm') {
+      grid-template-columns: repeat(1,1fr);
+      gap: 40px;
+    }
+  }
+
+  .text {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    @include media('md') {
+      gap: 20px;
+    }
+  }
+
+  p {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: -5%;
+    color: $color-white;
+    opacity: 60%;
+
+    @include media('lg') {
+      font-size: 14px;
+    }
+
+    a {
+      display: inline;
+      text-decoration: underline;
+      color: $color-orange;
+    }
+  }
+
+  .btn-radial {
+    height: 40px;
+    width: max-content;
+  }
+}
+
+.payment_delivery {
+  padding: 100px 0;
+
+  @include media('lg') {
+    padding: 70px 0;
+  }
+
+  &_head {
+    padding: 40px 0 0 0;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 80px;
+
+    @include media('md') {
+      gap: 40px;
+    }
+
+    @include media('sm') {
+      grid-template-columns: repeat(1,1fr);
+    }
+
+    p, span {
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 100%;
+      letter-spacing: -5%;
+      color: $color-white;
+      opacity: 60%;
+
+      @include media('lg') {
+        font-size: 14px;
+      }
+    }
+
+    span {
+      color: $color-orange;
+    }
+  }
+
+  &_block {
+    padding: 80px 0;
+
+    @include media('md') {
+      padding: 40px 0;
+    }
+
+    .block_in {
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      gap: 80px;
+
+      @include media('md') {
+        gap: 40px;
+      }
+
+      @include media('sm') {
+        grid-template-columns: repeat(1,1fr);
+      }
+    }
+
+    h3 {
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 130%;
+      letter-spacing: -4%;
+      color: $color-white;
+      margin-bottom: 40px;
+
+      @include media('lg') {
+        font-size: 20px;
+      }
+
+      @include media('md') {
+        font-size: 18px;
+      }
+
+      @include media('sm') {
+        font-size: 16px;
+      }
+    }
+
+    ul {
+      li {
+        padding: 20px 0;
+        border-bottom: 1px solid #FAF1E833;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        p, span {
+          font-weight: 300;
+          font-size: 16px;
+          line-height: 100%;
+          letter-spacing: -5%;
+          color: $color-white;
+          max-width: 500px;
+
+          @include media('sm') {
+            font-size: 14px;
+          }
+        }
+
+        ul {
+          padding-left: 20px;
+          li {
+            list-style-type: disc;
+          }
+        }
+
+        span {
+          opacity: 60%;
+        }
+      }
+    }
+
+    .product_list {
+      li {
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 100%;
+        letter-spacing: -5%;
+        color: $color-white;
+
+        @include media('sm') {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  .mini_block {
+    padding-bottom: 80px;
+
+    @include media('md') {
+      padding-bottom: 40px;
+    }
+  }
+}
+// payment
