@@ -2,6 +2,12 @@
   padding: 70px 0 30px 0;
   background: $color-black;
 
+  .container {
+    @include media('sm') {
+      width: calc(100% - 40px);
+    }
+  }
+
   &_top {
     display: flex;
     align-items: start;

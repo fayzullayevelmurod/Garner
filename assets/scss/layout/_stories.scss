@@ -2,6 +2,7 @@
 .stories {
   padding: 100px 0;
   background: $color-white;
+  overflow: hidden;
 
   @include media('lg') {
     padding: 70px 0;
@@ -11,11 +12,15 @@
     color: $color-black;
     text-align: center;
     margin-bottom: 60px;
+
+    @include media('lg') {
+      margin-bottom: 40px;
+    }
   }
 
   .slider-wrapper {
     width: 100%;
-    overflow: hidden;
+    overflow: visible;
 
     .customSwiper {
       width: 100%;

@@ -71,6 +71,10 @@ p, h1, h2, h3, h4, h5, h6 {
   @include media('lg') {
     width: calc(100% - 40px);
   }
+
+  @include media('sm') {
+    width: calc(100% - 20px);
+  }
 }
 
 .btn {
@@ -89,6 +93,7 @@ p, h1, h2, h3, h4, h5, h6 {
     text-transform: uppercase;
     text-align: center;
     color: $color-black;
+    height: 41px;
 
     @include media('lg') {
       height: 38px;
@@ -99,6 +104,7 @@ p, h1, h2, h3, h4, h5, h6 {
     border-radius: 4px;
     padding: 10px 20px;
     height: 41px;
+    max-height: 41px;
     display: flex;
     align-items: center;
     justify-content: center;

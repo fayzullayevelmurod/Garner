@@ -6,7 +6,7 @@ const bodyVisible = () => {
   document.querySelector("body").style.overflow = "visible";
 };
 
-const phoneInp = document.querySelectorAll('input[type="tel"]'); 
+const phoneInp = document.querySelectorAll('input[type="tel"]');
 
 if (phoneInp.length) {
   phoneInp.forEach((el) => {
@@ -71,7 +71,7 @@ if (headerAccordions.length) {
   headerAccordions.forEach((item) => {
     const btn = item.querySelector('.header-accordion__btn');
     const content = item.querySelector('.header-accordion__body-wrap');
-  
+
     btn.addEventListener('click', () => {
       item.classList.toggle('active');
       content.style.maxHeight = content.style.maxHeight ? null : content.scrollHeight + 'px';
@@ -113,42 +113,42 @@ if (menu) {
 
   const catalogBtn = document.querySelector('.menu-catalog__btn');
   const catalog = document.querySelector('.menu-catalog');
-  
+
   const catalogItemBtns = document.querySelectorAll('.menu-catalog__item-btn');
   const catalogItems = document.querySelectorAll('.menu-catalog__item');
-  
+
   const backBtn = document.querySelector('.back-btn');
-  
+
   const activeStack = [];
-  
-  
+
+
   catalogBtn.addEventListener('click', (e) => {
       e.preventDefault();
-  
+
       catalog.classList.add('active');
-  
+
       activeStack.push(catalog);
   });
-  
-  
+
+
   catalogItemBtns.forEach((btn, index) => {
       btn.addEventListener('click', (e) => {
           e.preventDefault();
-  
+
           const item = catalogItems[index];
-  
+
           item.classList.add('active');
-  
+
           activeStack.push(item);
       });
   });
-  
-  
+
+
   backBtn.addEventListener('click', (e) => {
       e.preventDefault();
-  
+
       const lastActive = activeStack.pop();
-  
+
       if (lastActive) {
           lastActive.classList.remove('active');
       }
@@ -185,7 +185,7 @@ const customSwiper = new Swiper(".customSwiper", {
 
   breakpoints: {
     0: {
-      slidesPerView: 1.5,
+      slidesPerView: 1.3,
     },
 
     576: {
