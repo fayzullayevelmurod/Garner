@@ -449,3 +449,41 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 // input-mask
+
+// accardion
+const accordions = document.querySelectorAll(".accordion");
+
+accordions.forEach((accordion) => {
+  const header = accordion.querySelector(".accordion__header");
+  const content = accordion.querySelector(".accordion__content");
+
+  header.addEventListener("click", () => {
+    const isOpen = accordion.classList.contains("is-open");
+
+    if (isOpen) {
+      // Auto bo'lsa, avval real heightni olamiz
+      content.style.height = `${content.scrollHeight}px`;
+
+      requestAnimationFrame(() => {
+        content.style.height = "0px";
+      });
+
+      accordion.classList.remove("is-open");
+    } else {
+      content.style.height = `${content.scrollHeight}px`;
+
+      accordion.classList.add("is-open");
+
+      content.addEventListener(
+        "transitionend",
+        () => {
+          if (accordion.classList.contains("is-open")) {
+            content.style.height = "auto";
+          }
+        },
+        { once: true },
+      );
+    }
+  });
+});
+// accardion

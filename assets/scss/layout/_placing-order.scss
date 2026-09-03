@@ -1,0 +1,306 @@
+// placing_order
+.placing_order {
+  padding: 80px 0;
+
+  .section_title {
+    margin-bottom: 80px;
+  }
+
+  &_in {
+    display: flex;
+    align-items: start;
+    gap: 20px;
+  }
+
+  &_left {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &_right {
+    background: #222021;
+    padding: 20px;
+    min-width: 550px;
+    flex-wrap: 0;
+
+    .head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 5px;
+      margin-bottom: 40px;
+
+      .edit_btn {
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 100%;
+        letter-spacing: -5%;
+        color: $color-orange;
+      }
+    }
+
+    h3 {
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 130%;
+      letter-spacing: -4%;
+      color: $color-white;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      span {
+        opacity: 60%;
+      }
+    }
+
+    p {
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 100%;
+      letter-spacing: -5%;
+      color: $color-white;
+
+      &.end_text {
+        opacity: 60%;
+        text-align: center;
+      }
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin: 40px 0;
+
+      li {
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 100%;
+        letter-spacing: -5%;
+        color: $color-white;
+        opacity: 60%;
+      }
+    }
+
+    h4 {
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 100%;
+      letter-spacing: -5%;
+      color: $color-white;
+      margin-bottom: 10px;
+    }
+
+    .line {
+      height: 1px;
+      width: 100%;
+      margin: 40px 0;
+      background: $color-white;
+      opacity: 40%;
+    }
+
+    .btn-white {
+      height: 50px;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.accordion {
+  width: 100%;
+  background: #211f20;
+  border-radius: 6px;
+  overflow: hidden;
+
+  &__header {
+    min-height: 91px;
+    padding: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    cursor: pointer;
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 130%;
+    letter-spacing: -4%;
+    color: $color-white;
+  }
+
+  &__button {
+    flex-shrink: 0;
+    min-height: 36px;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    border-radius: 4px;
+    background: $color-black;
+    color: $color-white;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: -5%;
+    text-align: center;
+    text-transform: uppercase;
+    transition:
+      background-color 0.25s ease,
+      color 0.25s ease;
+  }
+
+  &__content {
+    height: 0;
+    overflow: hidden;
+
+    transition: height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &__body {
+    padding: 0 20px 20px 20px;
+
+    opacity: 0;
+    transform: translateY(-8px);
+
+    transition:
+      opacity 0.25s ease,
+      transform 0.4s ease;
+
+    .accordion__form {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    .mini_text {
+      border-radius: 8px;
+      background: $color-orange;
+      padding: 20px;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 100%;
+      letter-spacing: -5%;
+      color: $color-white;
+    }
+
+    .btn-white {
+      width: 100%;
+    }
+
+    .checkboxs {
+      margin: 0;
+    }
+
+    .application-form__field {
+
+      label {
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 100%;
+        letter-spacing: -5%;
+        color: $color-white;
+        display: block;
+        margin-bottom: 10px;
+
+        span {
+          color: $color-orange;
+        }
+      }
+
+      .form-textarea {
+        border: 1px solid #FAF1E833;
+        height: 104px;
+        border-radius: 8px;
+      }
+    }
+  }
+
+  &.is-open {
+
+    .accordion__body {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+.custom-radio {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  &__label {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    cursor: pointer;
+    user-select: none;
+  }
+
+  &__input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  &__circle {
+    position: relative;
+
+    flex: 0 0 14px;
+    width: 14px;
+    height: 14px;
+    display: flex;
+    flex-shrink: 0;
+
+    border: 1px solid $color-orange;
+    border-radius: 50%;
+
+    box-sizing: border-box;
+
+    transition: 0.2s ease;
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: 50%;
+      left: 50%;
+
+      width: 8px;
+      height: 8px;
+
+      border-radius: 50%;
+      background-color: $color-orange;
+      display: flex;
+      flex-shrink: 0;
+
+      transform: translate(-50%, -50%) scale(0);
+
+      transition: transform 0.2s ease;
+    }
+  }
+
+  &__input:checked + &__circle {
+    &::after {
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
+
+  &__text {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: -5%;
+    color: $color-white;
+  }
+}
+// placing_order
