@@ -461,7 +461,6 @@ accordions.forEach((accordion) => {
     const isOpen = accordion.classList.contains("is-open");
 
     if (isOpen) {
-      // Auto bo'lsa, avval real heightni olamiz
       content.style.height = `${content.scrollHeight}px`;
 
       requestAnimationFrame(() => {

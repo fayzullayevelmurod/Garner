@@ -3602,6 +3602,13 @@ input:checked + .custom-checkbox__box svg {
   flex-direction: column;
   gap: 40px;
 }
+.accordion__body .contact_title {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 130%;
+  letter-spacing: -4%;
+  color: #FAF1E8;
+}
 .accordion__body .mini_text {
   border-radius: 8px;
   background: #B16A37;
@@ -3634,6 +3641,12 @@ input:checked + .custom-checkbox__box svg {
   border: 1px solid rgba(250, 241, 232, 0.2);
   height: 104px;
   border-radius: 8px;
+}
+.accordion__body .application-form {
+  gap: 20px;
+}
+.accordion__body .application-form .application-form__field:last-child {
+  grid-column: 2;
 }
 .accordion.is-open .accordion__body {
   opacity: 1;

@@ -95,7 +95,7 @@
           </h2>
           <div class="placing_order_in">
             <div class="placing_order_left">
-              <div class="accordion">
+              <div class="accordion is-open">
                 <div class="accordion__header">
                   <h3 class="accordion__title">Покупатель</h3>
 
@@ -126,14 +126,192 @@
                           </span>
                         </label>
                       </div>
-                      <!-- TEXTAREA -->
-                      <div class="application-form__field">
+                      <h3 class="contact_title">
+                        Контактные данные
+                      </h3>
+                      <div class="inputs_block application-form">
 
-                        <label for="comment">
-                          Адрес доставки <span>*</span>
-                        </label>
+                        <!-- NAME -->
+                        <div class="application-form__field">
 
-                        <textarea id="comment" name="comment" class="form-textarea" placeholder="Адрес доставки"></textarea>
+                          <label for="name">
+                            Имя <span>*</span>
+                          </label>
+
+                          <input id="name" name="name" type="text" class="form-input" placeholder="Иван" autocomplete="name">
+
+                        </div>
+
+                        <!-- NAME -->
+                        <div class="application-form__field">
+
+                          <label for="name">
+                            Фамилия <span>*</span>
+                          </label>
+
+                          <input id="name" name="name" type="text" class="form-input" placeholder="Иванов" autocomplete="name">
+
+                        </div>
+
+                        <!-- EMAIL -->
+                        <div class="application-form__field">
+
+                          <label for="email">
+                            Почта <span>*</span>
+                          </label>
+
+                          <input id="email" name="email" type="email" class="form-input" placeholder="Введите e-mail" autocomplete="email">
+
+                        </div>
+
+                        <!-- PHONE -->
+                        <div class="application-form__field">
+                          <label for="phone">
+                            Ваш номер <span>*</span>
+                          </label>
+
+                          <div class="phone-input">
+                            <div class="phone-input__country">
+                              <button type="button" class="phone-input__country-trigger" aria-expanded="false">
+                                <span class="phone-input__flag"></span>
+
+                                <svg class="phone-input__country-arrow" width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M6.00194 7.29347L2.35544 3.64697L1.64844 4.35397L6.00194 8.70747L10.3554 4.35397L9.64844 3.64697L6.00194 7.29347Z"
+                                    fill="#FAF1E8" />
+                                </svg>
+
+                                <span class="phone-input__code"></span>
+                              </button>
+                              <div class="phone-input__country-dropdown">
+                              </div>
+                            </div>
+
+                            <input id="user_tel_field" name="user_tel_field" type="text" class="phone-input__input" autocomplete="off"
+                              autocorrect="off" spellcheck="false">
+                          </div>
+                        </div>
+
+                        <!-- MODEL -->
+                        <div class="application-form__field">
+
+                          <label for="model">
+                            Страна <span>*</span>
+                          </label>
+
+                          <div class="custom-select" data-select>
+
+                            <button type="button" class="custom-select__trigger" aria-expanded="false">
+                              <span class="custom-select__value">
+                                Россия
+                              </span>
+
+                              <svg class="custom-select__arrow" width="8" height="8" viewBox="0 0 8 8" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path opacity="0.6" d="M4 7.5L1.40192 1.5L6.59808 1.5L4 7.5Z" fill="#FAF1E8" />
+                              </svg>
+                            </button>
+
+                            <div class="custom-select__dropdown">
+
+                              <button type="button" class="custom-select__option" data-value="GARNER GR713/1">
+                                GARNER GR713/1
+                              </button>
+
+                              <button type="button" class="custom-select__option" data-value="МАРТА MT-SM1739B">
+                                МАРТА MT-SM1739B
+                              </button>
+
+                              <button type="button" class="custom-select__option" data-value="Kamille KM 6723">
+                                Kamille KM 6723
+                              </button>
+
+                              <button type="button" class="custom-select__option" data-value="Polaris PST 0805">
+                                Polaris PST 0805
+                              </button>
+
+                              <button type="button" class="custom-select__option" data-value="ENDEVER WM-24">
+                                ENDEVER WM-24
+                              </button>
+
+                            </div>
+
+                            <input type="hidden" name="model" id="model">
+
+                          </div>
+                        </div>
+
+                        <!-- MODEL -->
+                        <div class="application-form__field">
+
+                          <label for="model">
+                            Регион/область <span>*</span>
+                          </label>
+
+                          <div class="custom-select" data-select>
+
+                            <button type="button" class="custom-select__trigger" aria-expanded="false">
+                              <span class="custom-select__value">
+                                -- Выберите --
+                              </span>
+
+                              <svg class="custom-select__arrow" width="8" height="8" viewBox="0 0 8 8" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path opacity="0.6" d="M4 7.5L1.40192 1.5L6.59808 1.5L4 7.5Z" fill="#FAF1E8" />
+                              </svg>
+                            </button>
+
+                            <div class="custom-select__dropdown">
+
+                              <button type="button" class="custom-select__option" data-value="GARNER GR713/1">
+                                GARNER GR713/1
+                              </button>
+
+                              <button type="button" class="custom-select__option" data-value="МАРТА MT-SM1739B">
+                                МАРТА MT-SM1739B
+                              </button>
+
+                              <button type="button" class="custom-select__option" data-value="Kamille KM 6723">
+                                Kamille KM 6723
+                              </button>
+
+                              <button type="button" class="custom-select__option" data-value="Polaris PST 0805">
+                                Polaris PST 0805
+                              </button>
+
+                              <button type="button" class="custom-select__option" data-value="ENDEVER WM-24">
+                                ENDEVER WM-24
+                              </button>
+
+                            </div>
+
+                            <input type="hidden" name="model" id="model">
+
+                          </div>
+                        </div>
+
+                        <!-- NAME -->
+                        <div class="application-form__field">
+
+                          <label for="name">
+                            Почтовый индекс <span>*</span>
+                          </label>
+
+                          <input id="name" name="name" type="text" class="form-input" placeholder="Почтовый индекс" autocomplete="name">
+
+                        </div>
+
+                        <!-- NAME -->
+                        <div class="application-form__field">
+
+                          <label for="name">
+                            Город <span>*</span>
+                          </label>
+
+                          <input id="name" name="name" type="text" class="form-input" placeholder="Город" autocomplete="name">
+
+                        </div>
                       </div>
                       <button type="submit" class="btn-white">
                         Продолжить
@@ -328,264 +506,6 @@
         </div>
       </section>
       <!-- placing_order -->
-
-      <!-- contact -->
-      <section class="contact">
-        <div class="container">
-          <h1 class="section_title">
-            Где мы представлены
-          </h1>
-          <div class="contact_social_in">
-            <ul class="contact_block">
-              <li>
-                <a href="#">
-                  E-mail
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  Номер телефона
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  Юридический адрес
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  Данные компании
-                </a>
-              </li>
-            </ul>
-            <ul class="contact_block">
-              <li>
-                <a href="#">
-                  <img src="./assets/images/social1.svg" alt="">
-                  <span>
-                    Wildberries
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <img src="./assets/images/social2.svg" alt="">
-                  <span>
-                    OZON
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <img src="./assets/images/social3.svg" alt="">
-                  <span>
-                    Яндекс.Маркет
-                  </span>
-                </a>
-              </li>
-            </ul>
-            <ul class="contact_block">
-              <li>
-                <a href="#">
-                  <img src="./assets/images/social4.svg" alt="">
-                  <span>
-                    Telegram
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <img src="./assets/images/social5.svg" alt="">
-                  <span>
-                    VK
-                  </span>
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div class="problems">
-            <div class="problems_block left">
-              <h2 class="section_title">
-                Возникли проблемы?
-              </h2>
-              <p>
-                Заполните форму: укажите товар и модель, а также опишите подробно что произошло. Наш отдел заботы изучит
-                ситуацию
-                и свяжется, чтобы помочь решить проблему или заменить товар на новый.
-              </p>
-              <img class="problems_img" src="./assets/images/problems_img.png" alt="">
-            </div>
-            <div class="problems_block">
-              <form action="#">
-                <div class="inputs_block application-form">
-
-                  <!-- NAME -->
-                  <div class="application-form__field">
-
-                    <label for="name">
-                      Имя <span>*</span>
-                    </label>
-
-                    <input id="name" name="name" type="text" class="form-input" placeholder="Введите имя"
-                      autocomplete="name">
-
-                  </div>
-
-                  <!-- PHONE -->
-                  <div class="application-form__field">
-                    <label for="phone">
-                      Ваш номер <span>*</span>
-                    </label>
-
-                    <div class="phone-input">
-                      <div class="phone-input__country">
-                        <button type="button" class="phone-input__country-trigger" aria-expanded="false">
-                          <span class="phone-input__flag"></span>
-
-                          <svg class="phone-input__country-arrow" width="12" height="12" viewBox="0 0 12 12" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path
-                              d="M6.00194 7.29347L2.35544 3.64697L1.64844 4.35397L6.00194 8.70747L10.3554 4.35397L9.64844 3.64697L6.00194 7.29347Z"
-                              fill="#FAF1E8" />
-                          </svg>
-
-                          <span class="phone-input__code"></span>
-                        </button>
-                        <div class="phone-input__country-dropdown">
-                        </div>
-                      </div>
-
-                      <input id="user_tel_field" name="user_tel_field" type="text" class="phone-input__input"
-                        autocomplete="off" autocorrect="off" spellcheck="false">
-                    </div>
-                  </div>
-
-                  <!-- EMAIL -->
-                  <div class="application-form__field">
-
-                    <label for="email">
-                      Почта <span>*</span>
-                    </label>
-
-                    <input id="email" name="email" type="email" class="form-input" placeholder="Введите e-mail"
-                      autocomplete="email">
-
-                  </div>
-
-                  <!-- MODEL -->
-                  <div class="application-form__field">
-
-                    <label for="model">
-                      Модель
-                    </label>
-
-                    <div class="custom-select" data-select>
-
-                      <button type="button" class="custom-select__trigger" aria-expanded="false">
-                        <span class="custom-select__value">
-                          --&nbsp;&nbsp; Выберите &nbsp;&nbsp;--
-                        </span>
-
-                        <svg class="custom-select__arrow" width="8" height="8" viewBox="0 0 8 8" fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path opacity="0.6" d="M4 7.5L1.40192 1.5L6.59808 1.5L4 7.5Z" fill="#FAF1E8" />
-                        </svg>
-                      </button>
-
-                      <div class="custom-select__dropdown">
-
-                        <button type="button" class="custom-select__option is-selected" data-value="">
-                          --&nbsp;&nbsp; Выберите &nbsp;&nbsp;--
-                        </button>
-
-                        <button type="button" class="custom-select__option" data-value="GARNER GR713/1">
-                          GARNER GR713/1
-                        </button>
-
-                        <button type="button" class="custom-select__option" data-value="МАРТА MT-SM1739B">
-                          МАРТА MT-SM1739B
-                        </button>
-
-                        <button type="button" class="custom-select__option" data-value="Kamille KM 6723">
-                          Kamille KM 6723
-                        </button>
-
-                        <button type="button" class="custom-select__option" data-value="Polaris PST 0805">
-                          Polaris PST 0805
-                        </button>
-
-                        <button type="button" class="custom-select__option" data-value="ENDEVER WM-24">
-                          ENDEVER WM-24
-                        </button>
-
-                      </div>
-
-                      <input type="hidden" name="model" id="model">
-
-                    </div>
-                  </div>
-
-                  <!-- TEXTAREA -->
-                  <div class="application-form__field">
-
-                    <label for="comment">
-                      Комментарий
-                    </label>
-
-                    <textarea id="comment" name="comment" class="form-textarea"
-                      placeholder="Введите комментарий"></textarea>
-
-                  </div>
-                </div>
-                <div class="checkboxs">
-                  <label class="custom-checkbox">
-                    <input type="checkbox">
-                    <span class="custom-checkbox__box">
-                      <svg width="9" height="7" viewBox="0 0 9 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M8.5 0.5L3 6L0.5 3.5" stroke="#B16A37" stroke-linecap="round"
-                          stroke-linejoin="round" />
-                      </svg>
-                    </span>
-                    <span class="custom-checkbox__text">
-                      Даю согласие на обработку персональных данных
-                    </span>
-                  </label>
-                  <label class="custom-checkbox">
-                    <input type="checkbox">
-                    <span class="custom-checkbox__box">
-                      <svg width="9" height="7" viewBox="0 0 9 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M8.5 0.5L3 6L0.5 3.5" stroke="#B16A37" stroke-linecap="round"
-                          stroke-linejoin="round" />
-                      </svg>
-                    </span>
-                    <span class="custom-checkbox__text">
-                      Я согласен с политикой конфиденциальности
-                    </span>
-                  </label>
-                  <label class="custom-checkbox">
-                    <input type="checkbox">
-                    <span class="custom-checkbox__box">
-                      <svg width="9" height="7" viewBox="0 0 9 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M8.5 0.5L3 6L0.5 3.5" stroke="#B16A37" stroke-linecap="round"
-                          stroke-linejoin="round" />
-                      </svg>
-                    </span>
-                    <span class="custom-checkbox__text">
-                      Я даю согласие на рекламную рассылку
-                    </span>
-                  </label>
-                </div>
-                <button type="submit" class="btn-radial">
-                  <span>
-                    Отправить
-                  </span>
-                </button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- contact -->
 
     </main>
     <!-- main -->
