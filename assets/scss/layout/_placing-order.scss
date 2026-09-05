@@ -1,15 +1,28 @@
 // placing_order
 .placing_order {
   padding: 80px 0;
+  overflow: hidden;
+
+  @include media('md') {
+    padding: 60px 0;
+  }
 
   .section_title {
     margin-bottom: 80px;
+
+    @include media('md') {
+      margin-bottom: 60px;
+    }
   }
 
   &_in {
     display: flex;
     align-items: start;
     gap: 20px;
+
+    @include media('lg') {
+      flex-direction: column-reverse;
+    }
   }
 
   &_left {
@@ -24,6 +37,11 @@
     padding: 20px;
     min-width: 550px;
     flex-wrap: 0;
+
+    @include media('lg') {
+      width: 100%;
+      min-width: 100%;
+    }
 
     .head {
       display: flex;
@@ -51,6 +69,10 @@
       align-items: center;
       gap: 20px;
 
+      @include media('md') {
+        font-size: 16px;
+      }
+
       span {
         opacity: 60%;
       }
@@ -62,6 +84,10 @@
       line-height: 100%;
       letter-spacing: -5%;
       color: $color-white;
+
+      @include media('md') {
+        font-size: 14px;
+      }
 
       &.end_text {
         opacity: 60%;
@@ -82,6 +108,10 @@
         letter-spacing: -5%;
         color: $color-white;
         opacity: 60%;
+
+        @include media('md') {
+          font-size: 14px;
+        }
       }
     }
 
@@ -92,6 +122,10 @@
       letter-spacing: -5%;
       color: $color-white;
       margin-bottom: 10px;
+
+      @include media('md') {
+        font-size: 14px;
+      }
     }
 
     .line {
@@ -133,6 +167,10 @@
     line-height: 130%;
     letter-spacing: -4%;
     color: $color-white;
+
+    @include media('md') {
+      font-size: 16px;
+    }
   }
 
   &__button {
@@ -178,6 +216,10 @@
       display: flex;
       flex-direction: column;
       gap: 40px;
+
+      @include media('md') {
+        gap: 20px;
+      }
     }
 
 
@@ -187,6 +229,10 @@
       line-height: 130%;
       letter-spacing: -4%;
       color: $color-white;
+
+      @include media('md') {
+        font-size: 16px;
+      }
     }
 
     .mini_text {
@@ -198,6 +244,10 @@
       line-height: 100%;
       letter-spacing: -5%;
       color: $color-white;
+
+      @include media('md') {
+        font-size: 14px;
+      }
     }
 
     .btn-white {
@@ -231,8 +281,13 @@
       }
     }
 
-    .application-form {
+    .inputs_block.application-form {
       gap: 20px;
+
+      @include media('sm') {
+        display: flex;
+        flex-direction: column;
+      }
 
       .application-form__field {
         &:last-child {
