@@ -449,3 +449,59 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 // input-mask
+
+
+// Account
+const accountAccordions = document.querySelectorAll('.account-accordion');
+
+if (accountAccordions.length) {
+  accountAccordions.forEach((item) => {
+    const btn = item.querySelector('.account-accordion__btn');
+    const content = item.querySelector('.account-accordion__body-wrap');
+  
+    btn.addEventListener('click', () => {
+      item.classList.toggle('active')
+      content.style.maxHeight = content.style.maxHeight ? null : content.scrollHeight + 'px';
+    });
+  });
+}
+
+const accountSwp = new Swiper('.account-order__swp', {
+  slidesPerView: 'auto',
+  spaceBetween: 5,
+  breakpoints: {
+    680: {
+      slidesPerView: 1,
+      spaceBetween: 20,
+    }
+  },
+  navigation: {
+    nextEl: '.account-order__swp .next-btn',
+    prevEl: '.account-order__swp .prev-btn'
+  }
+})
+
+const accountBasketSwp = new Swiper('.account-basket__swp', {
+  slidesPerView: 'auto',
+  spaceBetween: 10,
+})
+
+const accountLeftBtn = document.querySelector('.account-left__btn');
+const accountLeft = document.querySelector('.account-left');
+
+if (accountLeft) {
+  accountLeftBtn.onclick = () => {
+    accountLeft.classList.toggle('active');
+    accountLeftBtn.classList.toggle('active')
+  }
+}
+
+window.addEventListener('click', function (event) {
+  if (accountLeft) {
+    if (!accountLeft.contains(event.target) && !accountLeftBtn.contains(event.target)) {
+      accountLeft.classList.remove('active');
+      accountLeftBtn.classList.remove('active');
+    }
+  }
+})
+// Account end
