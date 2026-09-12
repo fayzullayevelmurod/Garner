@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Garner</title>
+  <!-- Swiper css -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <!-- Swiper css -->
+  <!-- favicon -->
+  <link rel="icon" href="./images/logo/favicon.svg">
+  <!-- favicon -->
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+    rel="stylesheet">
+  <!-- fonts -->
+  <!-- css link -->
+  <link rel="stylesheet" href="./assets/scss/style.css">
+  <!-- css link -->
+</head>
+
+<body>
+  <div class="wrapper">
+
+    <!-- Header -->
+    <header class="header">
+      <div class="container header-container">
+        <div class="header-left">
+          <div class="header-left__item">
+            <a href="#" class="header-btn">
+              <span>Меню</span>
+              <img src="./assets/images/bars.svg" alt="">
+            </a>
+          </div>
+          <div class="header-left__item">
+            <a href="#" class="header-btn">
+              <span>Каталог</span>
+              <img src="./assets/images/dropdown-icon.svg" alt="">
+            </a>
+          </div>
+        </div>
+        <a href="/" class="header-logo">
+          <img src="./assets/images/logo.svg" alt="">
+        </a>
+        <div class="header-right">
+          <a href="#" class="header-btn">
+            <img src="./assets/images/profile.svg" alt="">
+            <span>Профиль</span>
+          </a>
+          <a href="#" class="header-btn">
+            <img src="./assets/images/favorite-icon.svg" alt="">
+            <span>Избранное</span>
+          </a>
+          <a href="#" class="header-btn">
+            <img src="./assets/images/basket-icon.svg" alt="">
+            <span>Корзина</span>
+          </a>
+        </div>
+      </div>
+    </header>
+    <!-- Header end -->
+
+    <!-- main -->
+    <main>
+
+      <!-- breadcrumb -->
+      <div class="container">
+        <ul class="breadcrumb">
+          <li>
+            <a href="/">
+              Главная
+            </a>
+          </li>
+          <li>
+            /
+          </li>
+          <li>
+            <span>
+              корзина покупок
+            </span>
+          </li>
+        </ul>
+      </div>
+      <!-- breadcrumb -->
+
+      <!-- shopping_cart -->
+      <section class="shopping_cart">
+        <div class="container">
+          <h2 class="section_title">
+            Корзина покупок
+          </h2>
+          <div class="shopping_cart_in">
+            <div class="shopping_cart_right">
+              <div class="price">
+                <h3>
+                  Стоимость
+                </h3>
+                <ul>
+                  <li>
+                    <span>
+                      Итого
+                      2
+                    </span>
+                    <span>
+                      100 000 ₽
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      Итого
+                    </span>
+                    <span>
+                      100 000 ₽
+                    </span>
+                  </li>
+                </ul>
+                <ul class="total">
+                  <li>
+                    <span>
+                      Всего
+                    </span>
+                    <span>
+                      100 000 ₽
+                    </span>
+                  </li>
+                </ul>
+                <button class="btn-radial">
+                  Оформление заказа
+                </button>
+                <div class="line"></div>
+                <button class="btn-white">
+                  Быстрый заказ
+                </button>
+                <p>
+                  Наш менеджер перезвонит вам и оформит заказ за вас
+                </p>
+              </div>
+              <div class="coupon">
+                <div class="coupon_head">
+                  <h3>
+                    Купон
+                  </h3>
+                  <span>
+                    Ввести сертификат
+                  </span>
+                </div>
+                <div class="coupon_inputs">
+                  <input type="text" placeholder="Введите код купона">
+                  <button class="btn-white">
+                    Применить
+                  </button>
+                </div>
+              </div>
+              <div class="accordion cost">
+                <div class="accordion__header shopping_accordion_btn">
+                  <h3 class="accordion__title">
+                    Стоимость доставки
+                  </h3>
+
+                  <button class="accordion__button shop_accordion_icon" type="button">
+                    <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M5 3.27835e-07L1.75241 7.5L8.2476 7.5L5 3.27835e-07Z" fill="#FAF1E8" />
+                    </svg>
+                  </button>
+                </div>
+                <div class="accordion__content">
+                  <div class="accordion__body">
+                    <div class="accordion__form">
+                      <div class="inputs_block application-form">
+
+                        <!-- MODEL -->
+                        <div class="application-form__field">
+
+                          <label for="model">
+                            Страна <span>*</span>
+                          </label>
+
+                          <div class="custom-select" data-select>
+
+                            <button type="button" class="custom-select__trigger" aria-expanded="false">
+                              <span class="custom-select__value">
+                                Россия
+                              </span>
+
+                              <svg class="custom-select__arrow" width="8" height="8" viewBox="0 0 8 8" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path opacity="0.6" d="M4 7.5L1.40192 1.5L6.59808 1.5L4 7.5Z" fill="#FAF1E8" />
+                              </svg>
+                            </button>
+
+                            <div class="custom-select__dropdown">
+
+                              <button type="button" class="custom-select__option" data-value="GARNER GR713/1">
+                                GARNER GR713/1
+                              </button>
+
+                              <button type="button" class="custom-select__option" data-value="МАРТА MT-SM1739B">
+                                МАРТА MT-SM1739B
+                              </button>
+
+                              <button type="button" class="custom-select__option" data-value="Kamille KM 6723">
+                                Kamille KM 6723
+                              </button>
+
+                              <button type="button" class="custom-select__option" data-value="Polaris PST 0805">
+                                Polaris PST 0805
+                              </button>
+
+                              <button type="button" class="custom-select__option" data-value="ENDEVER WM-24">
+                                ENDEVER WM-24
+                              </button>
+
+                            </div>
+
+                            <input type="hidden" name="model" id="model">
+
+                          </div>
+                        </div>
+
+                        <!-- MODEL -->
+                        <div class="application-form__field">
+
+                          <label for="model">
+                            Регион/область <span>*</span>
+                          </label>
+
+                          <div class="custom-select" data-select>
+
+                            <button type="button" class="custom-select__trigger" aria-expanded="false">
+                              <span class="custom-select__value">
+                                -- Выберите --
+                              </span>
+
+                              <svg class="custom-select__arrow" width="8" height="8" viewBox="0 0 8 8" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path opacity="0.6" d="M4 7.5L1.40192 1.5L6.59808 1.5L4 7.5Z" fill="#FAF1E8" />
+                              </svg>
+                            </button>
+
+                            <div class="custom-select__dropdown">
+
+                              <button type="button" class="custom-select__option" data-value="GARNER GR713/1">
+                                GARNER GR713/1
+                              </button>
+
+                              <button type="button" class="custom-select__option" data-value="МАРТА MT-SM1739B">
+                                МАРТА MT-SM1739B
+                              </button>
+
+                              <button type="button" class="custom-select__option" data-value="Kamille KM 6723">
+                                Kamille KM 6723
+                              </button>
+
+                              <button type="button" class="custom-select__option" data-value="Polaris PST 0805">
+                                Polaris PST 0805
+                              </button>
+
+                              <button type="button" class="custom-select__option" data-value="ENDEVER WM-24">
+                                ENDEVER WM-24
+                              </button>
+
+                            </div>
+
+                            <input type="hidden" name="model" id="model">
+
+                          </div>
+                        </div>
+
+                        <!-- NAME -->
+                        <div class="application-form__field">
+
+                          <label for="name">
+                            Почтовый индекс <span>*</span>
+                          </label>
+
+                          <input id="name" name="name" type="text" class="form-input" placeholder="Почтовый индекс" autocomplete="name">
+
+                        </div>
+
+                        <!-- NAME -->
+                        <div class="application-form__field">
+
+                          <label for="name">
+                            Город <span>*</span>
+                          </label>
+
+                          <input id="name" name="name" type="text" class="form-input" placeholder="Город" autocomplete="name">
+
+                        </div>
+                      </div>
+                      <button type="submit" class="btn-white">
+                        Узнать цены
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- shopping_cart -->
+
+    </main>
+    <!-- main -->
+  </div>
+
+
+  <!-- iMask -->
+  <script src="./assets/scripts/iMask.js"></script>
+  <script src="./assets/scripts/countries.js"></script>
+  <!-- iMask -->
+  <!-- Swiper js -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+  <!-- Swiper js -->
+  <script src="./assets/scripts/header.js"></script>
+  <!-- js file -->
+  <script src="./assets/scripts/main.js" defer></script>
+  <!-- js file -->
+</body>
+
+</html>
