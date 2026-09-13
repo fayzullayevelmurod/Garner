@@ -258,10 +258,92 @@
                         <img src="./assets/images/favorite-icon.svg" alt="">
                         <span>Избранное</span>
                     </a>
-                    <a href="#" class="header-btn">
-                        <img src="./assets/images/basket-icon.svg" alt="">
-                        <span>Корзина</span>
-                    </a>
+                    <details class="basket">
+                        <summary class="header-btn">
+                            <img src="./assets/images/basket-icon.svg" alt="">
+                            <span>Корзина</span>
+                        </summary>
+                        <div class="basket__panel">
+                            <button class="basket__close" type="button" aria-label="Закрыть"
+                                onclick="this.closest('details').removeAttribute('open')">×</button>
+                            <div class="basket__head">
+                                <h2>Корзина</h2>
+                                <button class="basket__clear" type="button">Очистить корзину</button>
+                            </div>
+                                                        <div class="basket__scroll">
+                                                            <div class="basket__items">
+                                <article class="basket__card">
+                                    <button class="basket__remove" type="button" aria-label="Удалить товар">
+                                        <svg width="4" height="14" viewBox="0 0 4 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="2" cy="2" r="1.25" fill="#FAF1E8" />
+                                            <circle cx="2" cy="7" r="1.25" fill="#FAF1E8" />
+                                            <circle cx="2" cy="12" r="1.25" fill="#FAF1E8" />
+                                        </svg>
+                                    </button>
+                                    <div class="basket__image">
+                                        <img src="./assets/images/catalog_img.png" alt="Мультипекарь GR713/1">
+                                    </div>
+                                    <div class="basket__info">
+                                        <span>Артикул</span>
+                                        <h3>Название товара</h3>
+                                    </div>
+                                    <div class="basket__quantity">
+                                        <button type="button" aria-label="Уменьшить количество">&lsaquo;</button>
+                                        <span>1</span>
+                                        <button type="button" aria-label="Увеличить количество">&rsaquo;</button>
+                                    </div>
+                                    <div class="basket__price">
+                                        <strong>50 000 ₽</strong>
+                                        <span>50 000 ₽ / шт</span>
+                                    </div>
+                                </article>
+                                <article class="basket__card">
+                                    <button class="basket__remove" type="button" aria-label="Удалить товар">
+                                        <svg width="4" height="14" viewBox="0 0 4 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="2" cy="2" r="1.25" fill="#FAF1E8" />
+                                            <circle cx="2" cy="7" r="1.25" fill="#FAF1E8" />
+                                            <circle cx="2" cy="12" r="1.25" fill="#FAF1E8" />
+                                        </svg>
+                                    </button>
+                                    <div class="basket__image">
+                                        <img src="./assets/images/catalog_img.png" alt="Мультипекарь GR713/1">
+                                    </div>
+                                    <div class="basket__info">
+                                        <span>Артикул</span>
+                                        <h3>Название товара</h3>
+                                    </div>
+                                    <div class="basket__quantity">
+                                        <button type="button" aria-label="Уменьшить количество">&lsaquo;</button>
+                                        <span>1</span>
+                                        <button type="button" aria-label="Увеличить количество">&rsaquo;</button>
+                                    </div>
+                                    <div class="basket__price">
+                                        <strong>50 000 ₽</strong>
+                                        <span>50 000 ₽ / шт</span>
+                                    </div>
+                                </article>
+                                                            </div>
+                                                            <div class="basket__summary">
+                                                                <h2>Стоимость</h2>
+                                                                <ul>
+                                                                    <li>
+                                                                        <span>Итого</span>
+                                                                        <span>100 000 ₽</span>
+                                                                    </li>
+                                                                </ul>
+                                                                <div class="basket__summary-total">
+                                                                    <span>Всего</span>
+                                                                    <strong>100 000 ₽</strong>
+                                                                </div>
+                                                                <a href="placing-order.html" class="btn-radial">Оформить заказ</a>
+                                                            </div>
+                                                        </div>
+                            <div class="basket__footer">
+                                <a href="shopping-cart.html" class="btn-white">Перейти в корзину</a>
+                                <a href="placing-order.html" class="btn-radial">Оформить заказ</a>
+                            </div>
+                        </div>
+                    </details>
                     <div class="header-right__item header-menu">
                         <button class="header-btn header-menu__btn">
                             <span>Меню</span>

@@ -157,6 +157,12 @@ if (menu) {
 }
 
 window.addEventListener('click', function (event) {
+  const basket = document.querySelector('.basket');
+
+  if (basket && basket.open && !basket.contains(event.target)) {
+    basket.removeAttribute('open');
+  }
+
   if (headerMenu.length) {
     headerMenu.forEach(el => {
       if (!el.contains(event.target)) el.classList.remove('active');
@@ -314,6 +320,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 // checkbox
+
+// Shopping cart quantity
+document.addEventListener('click', (event) => {
+  const button = event.target.closest('[data-quantity-minus], [data-quantity-plus]');
+
+  if (!button) return;
+
+  const quantity = button.closest('[data-quantity]');
+  const value = quantity.querySelector('[data-quantity-value]');
+  const currentValue = Number(value.textContent);
+  const nextValue = button.hasAttribute('data-quantity-plus')
+    ? currentValue + 1
+    : Math.max(1, currentValue - 1);
+
+  value.textContent = nextValue;
+});
+// Shopping cart quantity
 
 
 // input-mask
@@ -542,3 +565,30 @@ accordions.forEach((accordion) => {
   });
 });
 // accardion
+
+// Shopping modal
+const shoppingModal = document.querySelector('.shopping-modal');
+const shoppingModalOpenButtons = document.querySelectorAll('[data-shopping-modal-open]');
+const shoppingModalCloseButton = document.querySelector('[data-shopping-modal-close]');
+
+if (shoppingModal) {
+  shoppingModalOpenButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+      shoppingModal.classList.add('is-open');
+      shoppingModal.setAttribute('aria-hidden', 'false');
+      bodyHidden();
+    });
+  });
+
+  const closeShoppingModal = () => {
+    shoppingModal.classList.remove('is-open');
+    shoppingModal.setAttribute('aria-hidden', 'true');
+    bodyVisible();
+  };
+
+  shoppingModalCloseButton?.addEventListener('click', closeShoppingModal);
+
+  shoppingModal.addEventListener('click', (event) => {
+    if (event.target === shoppingModal) closeShoppingModal();
+  });
+}

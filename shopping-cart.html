@@ -94,6 +94,83 @@
             Корзина покупок
           </h2>
           <div class="shopping_cart_in">
+            <div class="shopping_cart-content">
+              <article class="shopping_cart-card">
+                <button class="shopping_cart-card__remove" type="button" aria-label="Удалить товар">
+                  <svg width="4" height="14" viewBox="0 0 4 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="2" cy="2" r="1.25" fill="#FAF1E8" />
+                    <circle cx="2" cy="7" r="1.25" fill="#FAF1E8" />
+                    <circle cx="2" cy="12" r="1.25" fill="#FAF1E8" />
+                  </svg>
+                </button>
+                <div class="shopping_cart-card__image">
+                  <img src="./assets/images/catalog_img.png" alt="Мультипекарь GR713/1">
+                </div>
+                <div class="shopping_cart-card__info">
+                  <span>Артикул</span>
+                  <h3>Название товара</h3>
+                </div>
+                <div class="shopping_cart-card__quantity" data-quantity>
+                  <button type="button" data-quantity-minus aria-label="Уменьшить количество">&lsaquo;</button>
+                  <span data-quantity-value>1</span>
+                  <button type="button" data-quantity-plus aria-label="Увеличить количество">&rsaquo;</button>
+                </div>
+                <div class="shopping_cart-card__price">
+                  <strong>50 000 ₽</strong>
+                  <span>50 000 ₽ / шт</span>
+                </div>
+              </article>
+              <article class="shopping_cart-card">
+                <button class="shopping_cart-card__remove" type="button" aria-label="Удалить товар">
+                  <svg width="4" height="14" viewBox="0 0 4 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="2" cy="2" r="1.25" fill="#FAF1E8" />
+                    <circle cx="2" cy="7" r="1.25" fill="#FAF1E8" />
+                    <circle cx="2" cy="12" r="1.25" fill="#FAF1E8" />
+                  </svg>
+                </button>
+                <div class="shopping_cart-card__image">
+                  <img src="./assets/images/catalog_img.png" alt="Мультипекарь GR713/1">
+                </div>
+                <div class="shopping_cart-card__info">
+                  <span>Артикул</span>
+                  <h3>Название товара</h3>
+                </div>
+                <div class="shopping_cart-card__quantity" data-quantity>
+                  <button type="button" data-quantity-minus aria-label="Уменьшить количество">&lsaquo;</button>
+                  <span data-quantity-value>1</span>
+                  <button type="button" data-quantity-plus aria-label="Увеличить количество">&rsaquo;</button>
+                </div>
+                <div class="shopping_cart-card__price">
+                  <strong>50 000 ₽</strong>
+                  <span>50 000 ₽ / шт</span>
+                </div>
+              </article>
+              <article class="shopping_cart-card">
+                <button class="shopping_cart-card__remove" type="button" aria-label="Удалить товар">
+                  <svg width="4" height="14" viewBox="0 0 4 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="2" cy="2" r="1.25" fill="#FAF1E8" />
+                    <circle cx="2" cy="7" r="1.25" fill="#FAF1E8" />
+                    <circle cx="2" cy="12" r="1.25" fill="#FAF1E8" />
+                  </svg>
+                </button>
+                <div class="shopping_cart-card__image">
+                  <img src="./assets/images/catalog_img.png" alt="Мультипекарь GR713/1">
+                </div>
+                <div class="shopping_cart-card__info">
+                  <span>Артикул</span>
+                  <h3>Название товара</h3>
+                </div>
+                <div class="shopping_cart-card__quantity" data-quantity>
+                  <button type="button" data-quantity-minus aria-label="Уменьшить количество">&lsaquo;</button>
+                  <span data-quantity-value>1</span>
+                  <button type="button" data-quantity-plus aria-label="Увеличить количество">&rsaquo;</button>
+                </div>
+                <div class="shopping_cart-card__price">
+                  <strong>50 000 ₽</strong>
+                  <span>50 000 ₽ / шт</span>
+                </div>
+              </article>
+            </div>
             <div class="shopping_cart_right">
               <div class="price">
                 <h3>
@@ -128,16 +205,20 @@
                     </span>
                   </li>
                 </ul>
-                <button class="btn-radial">
-                  Оформление заказа
-                </button>
-                <div class="line"></div>
-                <button class="btn-white">
-                  Быстрый заказ
-                </button>
-                <p>
-                  Наш менеджер перезвонит вам и оформит заказ за вас
-                </p>
+                <div class="price_checkout">
+                  <button class="btn-radial">
+                    Оформление заказа
+                  </button>
+                </div>
+                <div class="price_quick">
+                  <div class="line"></div>
+                  <button class="btn-white" data-shopping-modal-open type="button">
+                    Быстрый заказ
+                  </button>
+                  <p>
+                    Наш менеджер перезвонит вам и оформит заказ за вас
+                  </p>
+                </div>
               </div>
               <div class="coupon">
                 <div class="coupon_head">
@@ -299,11 +380,95 @@
                   </div>
                 </div>
               </div>
+              <div class="quick_order">
+                <button class="btn-white" data-shopping-modal-open type="button">
+                  Быстрый заказ
+                </button>
+                <p>
+                  Наш менеджер перезвонит вам и оформит заказ за вас
+                </p>
+              </div>
+              <div class="checkout_order">
+                <button class="btn-radial">
+                  Оформление заказа
+                </button>
+              </div>
             </div>
           </div>
         </div>
       </section>
       <!-- shopping_cart -->
+
+      <!-- Shopping modal -->
+      <section class="shopping-modal" aria-hidden="true">
+        <div class="shopping-modal__content" role="dialog" aria-modal="true" aria-labelledby="shopping-modal-title">
+          <button class="shopping-modal__close" data-shopping-modal-close type="button" aria-label="Закрыть">×</button>
+          <h2 class="shopping-modal__title" id="shopping-modal-title">Быстрый заказ</h2>
+
+          <form class="shopping-modal__form" action="#">
+            <div class="application-form">
+              <div class="application-form__field">
+                <label for="quick-order-name">
+                  Имя <span>*</span>
+                </label>
+                <input id="quick-order-name" name="name" type="text" class="form-input" placeholder="Имя"
+                  autocomplete="name">
+              </div>
+
+              <div class="application-form__field">
+                <label for="user_tel_field">
+                  Ваш номер <span>*</span>
+                </label>
+                <div class="phone-input">
+                  <div class="phone-input__country">
+                    <button type="button" class="phone-input__country-trigger" aria-expanded="false">
+                      <span class="phone-input__flag"></span>
+                      <svg class="phone-input__country-arrow" width="12" height="12" viewBox="0 0 12 12" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.00194 7.29347L2.35544 3.64697L1.64844 4.35397L6.00194 8.70747L10.3554 4.35397L9.64844 3.64697L6.00194 7.29347Z" fill="#161516" />
+                      </svg>
+                      <span class="phone-input__code"></span>
+                    </button>
+                    <div class="phone-input__country-dropdown"></div>
+                  </div>
+                  <input id="user_tel_field" name="phone" type="text" class="phone-input__input"
+                    placeholder="+7 (000) 000-00-00" autocomplete="tel" autocorrect="off" spellcheck="false">
+                </div>
+              </div>
+
+              <div class="application-form__field">
+                <label for="quick-order-comment">Комментарий</label>
+                <textarea id="quick-order-comment" name="comment" class="form-textarea"
+                  placeholder="Комментарий"></textarea>
+              </div>
+            </div>
+
+            <div class="checkboxs">
+              <label class="custom-checkbox">
+                <input type="checkbox" name="personal-data" required>
+                <span class="custom-checkbox__box">
+                  <svg width="9" height="7" viewBox="0 0 9 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.5 0.5L3 6L0.5 3.5" stroke="#B16A37" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </span>
+                <span class="custom-checkbox__text">Даю согласие на обработку персональных данных</span>
+              </label>
+              <label class="custom-checkbox">
+                <input type="checkbox" name="privacy-policy" required>
+                <span class="custom-checkbox__box">
+                  <svg width="9" height="7" viewBox="0 0 9 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.5 0.5L3 6L0.5 3.5" stroke="#B16A37" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </span>
+                <span class="custom-checkbox__text">Я согласен с политикой конфиденциальности</span>
+              </label>
+            </div>
+
+            <button type="submit" class="btn-radial">Отправить заказ</button>
+          </form>
+        </div>
+      </section>
+      <!-- Shopping modal end -->
 
     </main>
     <!-- main -->

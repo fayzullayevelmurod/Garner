@@ -1,0 +1,242 @@
+.auth-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 20px;
+  background: $color-black;
+
+  &__card {
+    width: min(100%, 550px);
+    padding: 30px;
+    border-radius: 8px;
+    background: $color-white;
+    color: $color-black;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+  }
+
+  &__account {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    line-height: 15px;
+
+    a {
+      color: $color-orange;
+    }
+  }
+
+  &__title {
+    font-size: 18px;
+    line-height: 23px;
+    font-weight: 700;
+  }
+
+  &__close {
+    width: 48px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba($color-black, 0.25);
+    border-radius: 3px;
+    color: rgba($color-black, 0.6);
+    font-family: $font-Inter;
+    font-size: 24px;
+    line-height: 20px;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  &__field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &__label {
+    font-size: 14px;
+    line-height: 18px;
+
+    span {
+      color: $color-orange;
+    }
+  }
+
+  &__input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgba($color-black, 0.4);
+    border-radius: 6px;
+    background: transparent;
+    color: $color-black;
+    font-family: $font-JetBrains;
+    font-size: 14px;
+    line-height: 18px;
+
+    &::placeholder {
+      color: rgba($color-black, 0.45);
+    }
+
+    &:focus {
+      border-color: $color-orange;
+    }
+  }
+
+  &__forgot {
+    margin-top: -9px;
+    color: $color-orange;
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  &__actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+    margin-top: 18px;
+  }
+
+  &__button {
+    width: 100%;
+    height: 49px;
+    max-height: 49px;
+
+    &.btn-white {
+      background: $color-black;
+      color: $color-white;
+    }
+  }
+
+  &__phone {
+    border-color: rgba($color-black, 0.4);
+
+    .phone-input__country-trigger,
+    .phone-input__input {
+      color: $color-black;
+    }
+
+    .phone-input__input::placeholder {
+      color: rgba($color-black, 0.45);
+    }
+  }
+
+  &__checks {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .custom-checkbox__text {
+      color: $color-black;
+      font-size: 12px;
+      line-height: 15px;
+    }
+  }
+
+  &--register {
+    min-height: 100vh;
+
+    .auth-page__card {
+      width: min(100%, 720px);
+    }
+
+    .auth-page__header {
+      margin-bottom: 40px;
+    }
+
+    .auth-page__form {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      column-gap: 14px;
+      row-gap: 18px;
+    }
+
+    .auth-page__field--full,
+    .auth-page__checks,
+    .auth-page__button--register {
+      grid-column: 1 / -1;
+    }
+
+    .auth-page__button--register {
+      margin-top: 8px;
+    }
+  }
+
+  @include media('md') {
+    &--register {
+      align-items: flex-start;
+      padding-top: 40px;
+      padding-bottom: 40px;
+
+      .auth-page__card {
+        width: min(100%, 620px);
+        padding: 24px;
+      }
+
+      .auth-page__form {
+        grid-template-columns: 1fr;
+      }
+
+      .auth-page__field--full,
+      .auth-page__checks,
+      .auth-page__button--register {
+        grid-column: auto;
+      }
+    }
+  }
+
+  @include media('sm') {
+    padding: 16px 10px;
+
+    &__card {
+      padding: 20px 16px;
+    }
+
+    &__actions {
+      grid-template-columns: 1fr;
+    }
+
+    &--register {
+      padding-left: 20px;
+      padding-right: 20px;
+
+      .auth-page__header {
+        align-items: flex-start;
+        gap: 16px;
+      }
+
+      .auth-page__card {
+        width: 100%;
+        padding: 20px;
+      }
+
+      .auth-page__account {
+        gap: 12px;
+
+        .auth-page__account-label {
+          display: none;
+        }
+      }
+
+      .auth-page__form {
+        grid-template-columns: 1fr;
+      }
+
+      .auth-page__field--full,
+      .auth-page__checks,
+      .auth-page__button--register {
+        grid-column: auto;
+      }
+    }
+  }
+}
