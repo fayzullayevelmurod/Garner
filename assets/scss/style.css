@@ -6216,6 +6216,9 @@ input:checked + .custom-checkbox__box svg {
 .auth-page--register .auth-page__button--register {
   margin-top: 8px;
 }
+.auth-page--login {
+  min-height: 100vh;
+}
 @media (max-width: 870px) {
   .auth-page--register {
     align-items: flex-start;

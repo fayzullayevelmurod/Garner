@@ -172,6 +172,10 @@
     }
   }
 
+  &--login {
+    min-height: 100vh;
+  }
+
   @include media('md') {
     &--register {
       align-items: flex-start;
