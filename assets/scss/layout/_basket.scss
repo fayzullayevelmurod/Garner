@@ -16,7 +16,8 @@
     right: 0;
     z-index: 8;
     width: min(690px, calc(100vw));
-    height: calc(100vh);
+    height: 100vh;
+    height: 100svh;
     overflow: hidden;
     padding: 68px 20px 20px;
     border-radius: 8px 0 0 8px;
@@ -276,6 +277,7 @@
       right: 0;
       width: 100vw;
       height: 100vh;
+      height: 100svh;
       border-radius: 0;
       padding: 68px 14px 14px;
     }
