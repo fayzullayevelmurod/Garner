@@ -1,0 +1,338 @@
+// catalog-page
+.catalog-page {
+  padding-bottom: 70px;
+
+  @include media('lg') {
+    padding-bottom: 70px;
+  }
+
+  .section_title {
+    margin: 60px 0 40px;
+
+    @include media('lg') {
+      margin: 40px 0 30px;
+    }
+  }
+
+  &__in {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+
+    @include media('lg') {
+      flex-direction: column;
+      gap: 40px;
+    }
+  }
+
+  &__left {
+    width: 400px;
+    flex-shrink: 0;
+
+    @include media('lg') {
+      width: 100%;
+    }
+  }
+
+  &__content {
+    flex: 1;
+    min-width: 0;
+  }
+
+  &__grid {
+    border-top: 1px solid #444140;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    @include media('xl') {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include media('lg') {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    @include media('md') {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include media('sm') {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .catalog_card {
+      display: block;
+      grid-column: auto;
+      border-right: 1px solid #444140;
+      border-bottom: 1px solid #444140;
+
+      img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 640 / 830;
+        object-fit: contain;
+      }
+
+      &:nth-child(4n) {
+        border-right: none;
+      }
+
+      @include media('xl') {
+        &:nth-child(4n) {
+          border-right: 1px solid #444140;
+        }
+
+        &:nth-child(3n) {
+          border-right: none;
+        }
+      }
+
+      @include media('lg') {
+        &:nth-child(3n) {
+          border-right: 1px solid #444140;
+        }
+
+        &:nth-child(4n) {
+          border-right: none;
+        }
+      }
+
+      @include media('md') {
+        &:nth-child(4n) {
+          border-right: 1px solid #444140;
+        }
+
+        &:nth-child(3n) {
+          border-right: none;
+        }
+      }
+
+      @include media('sm') {
+        &:nth-child(3n),
+        &:nth-child(4n) {
+          border-right: 1px solid #444140;
+        }
+
+        &:nth-child(2n) {
+          border-right: none;
+        }
+      }
+    }
+  }
+
+  &__pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 60px;
+
+    @include media('sm') {
+      gap: 10px;
+      margin-top: 40px;
+    }
+
+    a {
+      min-width: 34px;
+      height: 50px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 10px;
+      border-radius: 8px;
+      font-weight: 300;
+      font-size: 20px;
+      line-height: 100%;
+      letter-spacing: -0.05em;
+      color: $color-white;
+      opacity: 60%;
+      transition: .2s ease-in-out all;
+
+      @include media('sm') {
+        min-width: 30px;
+        height: 30px;
+        padding: 0 6px;
+        font-size: 14px;
+      }
+
+      &:hover {
+        opacity: 1;
+      }
+
+      &.is-active {
+        padding: 0 30px;
+        background: $color-orange;
+        opacity: 1;
+
+        @include media('sm') {
+          padding: 0 8px;
+        }
+      }
+    }
+
+    .next-btn {
+      &:hover {
+        svg path {
+          stroke: $color-orange;
+        }
+      }
+
+      svg path {
+        transition: .2s ease-in-out all;
+      }
+    }
+  }
+}
+
+.catalog-filter {
+  border-radius: 12px;
+  padding: 20px;
+  background: #222021;
+
+  &__toggle {
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+    font-family: inherit;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 150%;
+    letter-spacing: -0.05em;
+    color: $color-white;
+
+    @include media('lg') {
+      display: flex;
+    }
+
+    svg {
+      flex-shrink: 0;
+      transition: .2s ease-in-out all;
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @include media('lg') {
+      display: none;
+      padding-top: 30px;
+    }
+  }
+
+  &.active {
+    .catalog-filter__toggle svg {
+      transform: rotateZ(180deg);
+    }
+
+    .catalog-filter__body {
+      @include media('lg') {
+        display: flex;
+      }
+    }
+  }
+
+  &__head {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__title {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 150%;
+    letter-spacing: -0.05em;
+    text-align: left;
+    color: $color-white;
+  }
+
+  .custom-checkbox {
+    flex-shrink: 0;
+  }
+
+  .custom-checkbox {
+    gap: 20px;
+
+    &__box {
+      position: relative;
+      border-radius: 4px;
+
+      &::after {
+        content: "";
+        position: absolute;
+        inset: 3px;
+        border-radius: 1px;
+        background: $color-orange;
+        opacity: 0;
+        transform: scale(0.7);
+        transition: opacity .15s ease, transform .15s ease;
+      }
+    }
+
+    input:checked + .custom-checkbox__box::after {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    &__text {
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 150%;
+      letter-spacing: -0.05em;
+      color: $color-white;
+    }
+  }
+}
+
+.catalog-accordion {
+  &__btn {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 0;
+    font-family: inherit;
+
+    svg {
+      flex-shrink: 0;
+      transition: .2s ease-in-out all;
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px 0 0 40px;
+
+    @include media('lg') {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px 40px;
+    }
+
+    @include media('sm') {
+      grid-template-columns: repeat(1, 1fr);
+      padding-left: 30px;
+    }
+
+    &-wrap {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-in-out;
+    }
+  }
+
+  &.active {
+    .catalog-accordion__btn svg {
+      transform: rotateZ(180deg);
+    }
+  }
+}
+// catalog-page

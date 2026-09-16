@@ -529,6 +529,34 @@ window.addEventListener('click', function (event) {
 })
 // Account end
 
+// Catalog filter accordion
+const catalogAccordions = document.querySelectorAll('.catalog-accordion');
+
+if (catalogAccordions.length) {
+  catalogAccordions.forEach((item) => {
+    const btn = item.querySelector('.catalog-accordion__btn');
+    const content = item.querySelector('.catalog-accordion__body-wrap');
+
+    btn.addEventListener('click', () => {
+      item.classList.toggle('active');
+      content.style.maxHeight = content.style.maxHeight ? null : content.scrollHeight + 'px';
+    });
+  });
+}
+// Catalog filter accordion end
+
+// Catalog filter toggle
+const catalogFilter = document.querySelector('.catalog-filter');
+
+if (catalogFilter) {
+  const catalogFilterToggle = catalogFilter.querySelector('.catalog-filter__toggle');
+
+  catalogFilterToggle.addEventListener('click', () => {
+    catalogFilter.classList.toggle('active');
+  });
+}
+// Catalog filter toggle end
+
 // accardion
 const accordions = document.querySelectorAll(".accordion");
 
