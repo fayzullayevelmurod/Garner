@@ -50,6 +50,12 @@
     border-bottom: 1px solid #444140;
     padding: 10px;
 
+    @media (hover: hover) {
+      &:hover &-text h3 {
+        color: $color-orange;
+      }
+    }
+
     &.empty_one {
       @include media('lg') {
         display: none;
@@ -78,13 +84,6 @@
       @include media('sm') {
         grid-column: 1 / -1;
         border-right: none;
-      }
-
-      img {
-        @include media('sm') {
-          height: 400px;
-          width: 320px;
-        }
       }
     }
 
@@ -128,15 +127,10 @@
 
     img {
       display: block;
-      width: 320px;
-      height: 408px;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 320 / 408;
       object-fit: cover;
-      margin: 0 auto;
-
-      @include media('sm') {
-        width: 150px;
-        height: 190px;
-      }
     }
 
     &-text {
@@ -147,6 +141,7 @@
         letter-spacing: -5%;
         color: $color-white;
         margin: 10px 0;
+        transition: .2s ease-in-out color;
 
         @include media('lg') {
           font-size: 14px;

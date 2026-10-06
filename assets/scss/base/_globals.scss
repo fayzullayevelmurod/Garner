@@ -94,9 +94,25 @@ p, h1, h2, h3, h4, h5, h6 {
     text-align: center;
     color: $color-black;
     height: 41px;
+    transition: .2s ease-in-out background, .2s ease-in-out color;
 
     @include media('lg') {
       height: 38px;
+    }
+
+    img {
+      transition: .2s ease-in-out filter;
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        background: $color-black;
+        color: $color-white;
+
+        img {
+          filter: invert(1);
+        }
+      }
     }
   }
 
@@ -117,9 +133,16 @@ p, h1, h2, h3, h4, h5, h6 {
     text-align: center;
     color: $color-white;
     white-space: nowrap;
+    transition: .2s ease-in-out filter;
 
     @include media('lg') {
       height: 38px;
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        filter: brightness(1.12);
+      }
     }
   }
 }
@@ -184,6 +207,16 @@ p, h1, h2, h3, h4, h5, h6 {
 
   a, li {
     color: #FAF1E866;
+  }
+
+  a {
+    transition: .2s ease-in-out color;
+
+    @media (hover: hover) {
+      &:hover {
+        color: $color-orange;
+      }
+    }
   }
 
   span {

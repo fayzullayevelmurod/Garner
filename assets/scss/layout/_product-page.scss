@@ -601,9 +601,9 @@
       padding: 20px 0;
       border-bottom: 1px solid #16151666;
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       justify-content: space-between;
-      gap: 5px;
+      gap: 20px;
 
       span {
         font-weight: 300;
@@ -611,9 +611,21 @@
         line-height: 100%;
         letter-spacing: -5%;
         color: $color-black;
+        overflow-wrap: anywhere;
 
         @include media('lg') {
           font-size: 14px;
+        }
+
+        &:first-child {
+          flex: 1 1 auto;
+          text-align: left;
+        }
+
+        &:last-child {
+          flex: 0 1 auto;
+          max-width: 50%;
+          text-align: right;
         }
       }
     }

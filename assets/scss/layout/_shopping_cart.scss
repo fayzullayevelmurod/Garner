@@ -305,13 +305,14 @@
     .accordion__button {
       background: transparent;
       padding: 0;
+      color: $color-white;
       transition: transform 0.25s ease;
-      transform: rotate(180deg);
+      transform: rotate(0);
     }
 
     &.is-open {
       .shop_accordion_icon {
-        transform: rotate(0);
+        transform: rotate(180deg);
       }
     }
 

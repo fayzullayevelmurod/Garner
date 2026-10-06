@@ -35,7 +35,7 @@
   }
 
   &-container {
-    min-height: 1080px;
+    min-height: 100svh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -43,21 +43,13 @@
     gap: 30px;
     padding: 30px;
 
-    @include media('xl') {
-      min-height: 820px;
-    }
-
-    @include media('lg') {
-      min-height: 720px;
-    }
-
     @include media('md') {
       gap: 20px;
     }
 
     @include media('sm') {
-      gap: 430px;
-      padding: 10px 10px 30px 10px;
+      justify-content: space-between;
+      padding: 120px 10px 30px 10px;
     }
   }
 

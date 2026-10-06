@@ -31,7 +31,9 @@
       }
 
       .swiper-slide {
-        height: 776px;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 3 / 5;
 
         display: flex;
         align-items: center;
@@ -45,18 +47,6 @@
         transition:
             transform 0.4s ease,
             opacity 0.4s ease;
-
-            @include media('xl') {
-              height: 580px;
-            }
-
-            @include media('lg') {
-              height: 520px;
-            }
-
-            @include media('sm') {
-              height: 394px;
-            }
 
         img {
             width: 100%;

@@ -96,6 +96,19 @@ if (headerCatalog) {
 }
 // Header catalog end
 
+// Header scroll state
+const fixedHeader = document.querySelector('.header');
+
+if (fixedHeader) {
+  const updateHeaderState = () => {
+    fixedHeader.classList.toggle('is-scrolled', window.scrollY > 10);
+  };
+
+  updateHeaderState();
+  window.addEventListener('scroll', updateHeaderState, { passive: true });
+}
+// Header scroll state end
+
 const menu = document.querySelector('.menu');
 const menuClose = document.querySelector('.menu-close');
 const headerBars = document.querySelector('.header .bars');
@@ -301,6 +314,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (valueSpan) valueSpan.innerText = text;
       if (hiddenInput) hiddenInput.value = val;
+      currentSelect.classList.toggle('has-value', val !== '');
 
       currentSelect.querySelectorAll('.custom-select__option').forEach((opt) => {
         opt.classList.remove('is-selected');

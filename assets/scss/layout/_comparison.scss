@@ -7,6 +7,11 @@
   }
 
   &_selects {
+    position: sticky;
+    top: 60px;
+    z-index: 8;
+    background: $color-black;
+    padding: 10px 0;
 
     &.application-form {
       display: grid;
@@ -20,6 +25,12 @@
       @include media('sm') {
         gap: 10px;
       }
+    }
+
+    .custom-select.has-value .custom-select__trigger {
+      background: #a36239;
+      border-color: #a36239;
+      color: #faf1e8;
     }
 
     .application-form__field {

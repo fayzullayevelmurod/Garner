@@ -1,10 +1,18 @@
 .header {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   padding: 20px 0;
-  z-index: 2;
+  z-index: 9;
+  transition: .2s ease-in-out background, .2s ease-in-out padding;
+
+  &.is-scrolled {
+    background: rgba(22, 21, 22, 0.85);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 10px 0;
+  }
 
   &-container {
     display: flex;
@@ -50,9 +58,26 @@
     letter-spacing: -0.05em;
     text-align: center;
     color: $color-black;
+    transition: .2s ease-in-out background, .2s ease-in-out color, .2s ease-in-out border-color;
+
+    img {
+      transition: .2s ease-in-out filter;
+    }
 
     @include media('lg') {
       height: 28px;
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        background: $color-black;
+        border-color: $color-black;
+        color: $color-white;
+
+        img {
+          filter: invert(1);
+        }
+      }
     }
   }
 
@@ -167,6 +192,8 @@
       bottom: -5px;
       transform: translateY(100%);
       width: 100%;
+      max-height: calc(100vh - 80px);
+      overflow-y: auto;
       padding: 40px 20px;
       border-radius: 8px;
       background: $color-white;
@@ -225,6 +252,10 @@
 
           &:first-child {
               border-top: 1px solid rgba(22, 21, 22, 0.4);
+          }
+
+          &:empty {
+              display: none;
           }
       }
 
@@ -318,14 +349,18 @@
         gap: 10px;
       }
 
+      li:empty {
+        display: none;
+      }
+
       a {
         width: 100%;
         display: flex;
-        justify-content: flex-end;
+        justify-content: flex-start;
         font-weight: 300;
         font-size: 16px;
         letter-spacing: -0.05em;
-        text-align: right;
+        text-align: left;
         transition: .2s ease-in-out all;
 
         @include media('xl') {
@@ -350,10 +385,6 @@
 
           svg {
             transform: rotateZ(180deg);
-
-            path {
-              fill: $color-white;
-            }
           }
         }
 
@@ -500,6 +531,13 @@
       color: $color-white;
       width: 100%;
       padding: 10px 0;
+      transition: .2s ease-in-out color;
+
+      @media (hover: hover) {
+        &:hover {
+          color: $color-orange;
+        }
+      }
     }
   }
 
